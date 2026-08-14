@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qui sommes-nous ? — Alliance Française de Genève</title>
+<meta name="description" content="Découvrez l'équipe pédagogique de l'Alliance Française de Genève : des enseignant·es qualifié·es, expert·es en FLE et dotés d'une expérience internationale.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#FAFAF8; --ivory-deep:#F1F0EC; --navy:#C8102E; --navy-deep:#8F0B20;
+    --ochre:#1A1A1A; --ochre-soft:#F1E4E1; --on-red:#F6D9D2; --charcoal:#1A1A1A;
+    --charcoal-soft:#5C5C5C; --line:#E2E0DC; --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--ivory);color:var(--charcoal);font-family:'Inter',sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;letter-spacing:-0.01em;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+  :focus-visible{outline:3px solid var(--ochre);outline-offset:2px;}
+
+  .topbar{background:var(--navy);color:#EDE7D6;font-size:13px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:36px;}
+  .topbar a{opacity:.85;}
+  nav.mainnav{position:sticky;top:0;z-index:50;background:rgba(250,250,248,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  nav.mainnav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand-mark{font-family:'Fraunces',serif;font-style:italic;font-weight:700;font-size:26px;color:var(--navy);line-height:1;}
+  .brand-divider{width:1px;height:30px;background:var(--line);}
+  .brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:16px;line-height:1.2;color:var(--charcoal);}
+  .brand-name span{display:block;font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:12px;color:var(--charcoal-soft);}
+  .nav-links{display:flex;gap:30px;align-items:center;}
+  .nav-links > a{font-size:14.5px;font-weight:600;padding:8px 2px;}
+  .nav-cta{background:var(--navy);color:#fff !important;padding:10px 20px;border-radius:999px;font-weight:600;font-size:14px;}
+  .burger{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--navy);}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);background:var(--ochre-soft);padding:7px 14px;border-radius:999px;margin-bottom:22px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:700;font-size:15px;}
+  .btn-primary{background:var(--navy);color:#fff;}
+  .btn-ghost{border:1.5px solid var(--navy);color:var(--navy);}
+
+  .breadcrumb{padding:20px 0;font-size:13.5px;color:var(--charcoal-soft);}
+  .breadcrumb a{color:var(--charcoal-soft);}
+  .breadcrumb span.sep{margin:0 8px;opacity:.5;}
+  .breadcrumb span.current{color:var(--navy);font-weight:600;}
+
+  .page-hero{padding:20px 0 60px;max-width:760px;}
+  .page-hero h1{font-size:clamp(32px,4.4vw,48px);line-height:1.08;color:var(--navy);margin-bottom:20px;}
+  .page-hero p{font-size:17px;color:var(--charcoal-soft);}
+
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-bottom:76px;}
+  .team-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;text-align:center;}
+  .avatar{width:76px;height:76px;border-radius:50%;background:var(--ochre-soft);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:24px;color:var(--navy);font-weight:700;}
+  .team-card h3{font-size:17px;margin-bottom:4px;}
+  .team-card .role{font-size:13px;color:var(--navy);font-weight:600;margin-bottom:10px;}
+  .team-card p{font-size:13.5px;color:var(--charcoal-soft);}
+
+  .quals{background:var(--ivory-deep);padding:60px 0;border-top:1px solid var(--line);text-align:center;}
+  .quals h2{font-size:clamp(24px,3vw,30px);color:var(--navy);margin-bottom:16px;}
+  .quals p{max-width:70ch;margin:0 auto;color:var(--charcoal-soft);font-size:16px;}
+
+  footer{background:#161616;color:#B8B8B6;padding:56px 0 28px;margin-top:0;}
+  footer .wrap{text-align:center;}
+  footer a{color:#B8BFD1;}
+
+  @media (max-width:860px){
+    .nav-links{display:none;}
+    .burger{display:block;}
+    .team-grid{grid-template-columns:1fr 1fr;}
+  }
+
+  /* 右側のアクション＆ツールアイコン用スタイル */
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px; /* アイコン間の余白 */
+  }
+
+  .nav-actions > a {
+    font-size: 20px; /* アイコンのサイズ */
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+
+  .nav-actions > a:hover {
+    transform: translateY(-2px); /* ホバー時に少し浮き上がるエフェクト */
+  }
+
+  /* 一番右の言語切り替えドロップダウンが画面外にはみ出ないようにする調整 */
+  .lang-menu .dd-menu {
+    left: auto;
+    right: -10px;
+    transform: translateX(0) translateY(6px);
+    width: auto;
+    min-width: 130px;
+  }
+  .lang-menu:hover .dd-menu, .lang-menu:focus-within .dd-menu {
+    transform: translateX(0) translateY(2px);
+  }
+
+  /* メニュー項目が増えたので中央メニューの隙間を少し調整 */
+  .nav-links {
+    gap: 20px;
+  }
+
+  /* ---------- TEAM MEMBERS ---------- */
+  .team-section {
+    padding-bottom: 76px;
+  }
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  .member-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .member-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,.08);
+  }
+  .member-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: var(--ivory-deep);
+  }
+  .member-info {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .member-name {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .member-role {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--charcoal-soft);
+    margin-bottom: 12px;
+  }
+  .member-desc {
+    font-size: 13px;
+    color: var(--charcoal-soft);
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex-grow: 1;
+    text-align: left;
+  }
+  .member-desc p {
+    margin-bottom: 8px;
+  }
+  .member-desc p:last-child {
+    margin-bottom: 0;
+  }
+  .member-linkedin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: #0A66C2;
+    font-weight: 600;
+    font-size: 13.5px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(10, 102, 194, 0.1);
+    transition: background 0.2s ease;
+    align-self: center;
+    margin-top: auto;
+  }
+  .member-linkedin:hover {
+    background: rgba(10, 102, 194, 0.2);
+  }
+  .section-divider {
+    height: 1px;
+    background: var(--line);
+    margin: 60px 0;
+  }
+
+  /* NAV DROPDOWN */
+  .nav-dropdown{position:relative;}
+  .nav-dropdown > .dd-trigger{
+    display:flex;align-items:center;gap:5px;font-size:14.5px;font-weight:600;
+    padding:8px 2px;cursor:pointer;background:none;border:none;color:inherit;font-family:inherit;
+  }
+  .nav-dropdown > .dd-trigger::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--ochre);
+    transform:scaleX(0);transition:transform .2s ease;transform-origin:left;
+  }
+  .nav-dropdown:hover > .dd-trigger::after,.nav-dropdown:focus-within > .dd-trigger::after{transform:scaleX(1);}
+  .dd-trigger .caret{font-size:10px;transition:transform .2s ease;}
+  .nav-dropdown:hover .dd-trigger .caret,.nav-dropdown:focus-within .dd-trigger .caret{transform:rotate(180deg);}
+  .dd-menu{
+    position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    box-shadow:0 20px 44px rgba(0,0,0,.14);padding:10px;width:280px;
+    opacity:0;visibility:hidden;transition:opacity .18s ease, transform .18s ease, visibility .18s ease;
+    z-index:60;
+  }
+  .nav-dropdown:hover .dd-menu,.nav-dropdown:focus-within .dd-menu{
+    opacity:1;visibility:visible;transform:translateX(-50%) translateY(2px);
+  }
+  .dd-menu a{
+    display:flex;flex-direction:column;gap:2px;padding:10px 14px;border-radius:8px;
+    font-size:13.5px;font-weight:600;color:var(--charcoal);
+  }
+  .dd-menu a:hover{background:var(--ivory-deep);color:var(--navy);}
+  .dd-menu a small{font-weight:400;font-size:12px;color:var(--charcoal-soft);}
+  .dd-heading{
+    padding:8px 14px 6px;font-size:11px;font-weight:700;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--charcoal-soft);
+  }
+  .dd-menu .dd-divider{height:1px;background:var(--line);margin:8px 4px;}
+  .dd-menu .dd-viewall{color:var(--navy);font-weight:700;}
+
+
+  /* ---------- PROFILE ACCORDION ---------- */
+  .profile-accordion {
+    text-align: left;
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+  .profile-accordion summary {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    list-style: none;
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--ivory-deep);
+    transition: background 0.2s ease;
+  }
+  .profile-accordion summary::-webkit-details-marker {
+    display: none;
+  }
+  .profile-accordion summary:hover {
+    background: var(--line);
+  }
+  .profile-accordion[open] summary {
+    margin-bottom: 12px;
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+  }
+  .profile-details-content {
+    font-size: 13px;
+    color: var(--charcoal-soft);
+    line-height: 1.6;
+    animation: fadeIn 0.3s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+</style>
+
+
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a href="#">+41 78 609 29 80</a>
+    <a href="#">Nous contacter</a>
+  </div>
+</div>
+
+<nav class="mainnav">
+  <div class="wrap">
+    
+    <!-- 1. 左側：Logo AFGE (l'Accueil) -->
+    <a href="../accueil.html" class="brand">
+      <span class="brand-mark">af</span>
+      <span class="brand-divider"></span>
+      <span class="brand-name">Alliance Française<span>Genève – Suisse</span></span>
+    </a>
+
+    <!-- 2. 中央：メインメニュー -->
+    <div class="nav-links">
+      
+      <!-- Cours de français (Cours)(test)(eachCours) -->
+      <div class="nav-dropdown">
+        <button class="dd-trigger" aria-expanded="false" aria-haspopup="true">
+          <span data-i18n="nav-cours">Cours de français</span> <span class="caret">▾</span>
+        </button>
+        <div class="dd-menu">
+          <a href="cours.html" class="dd-viewall" data-i18n="dd-viewall-top">Cours (Vue d'ensemble)</a>
+          <div class="dd-divider"></div>
+          <a href="../accueil.html#niveau"><span data-i18n="nav-niveau">Test de placement</span><small data-i18n="niveau-sub">Gratuit, en ligne</small></a>
+          <div class="dd-divider"></div>
+          <div class="dd-heading" data-i18n="dd-heading-cours">Nos Cours</div>
+          <a href="cours-particuliers-adultes.html"><span data-i18n="dd-adultes">Cours particuliers adultes</span><small data-i18n="dd-adultes-sub">Individuel, A1 à C1</small></a>
+          <a href="cours-particuliers-enfants.html"><span data-i18n="dd-enfants">Cours particuliers enfants</span><small data-i18n="dd-enfants-sub">Individuel, A1 à C1</small></a>
+          <a href="cours-du-soir-french-essentials.html"><span data-i18n="dd-essentials">Cours du soir : French Essentials</span><small data-i18n="dd-essentials-sub">Groupe, A1 · A2</small></a>
+          <a href="cours-du-soir-french-in-action.html"><span data-i18n="dd-action">Cours du soir : French in Action</span><small data-i18n="dd-action-sub">Groupe, B1 · B2</small></a>
+          <a href="cours-intensifs.html"><span data-i18n="dd-intensifs">Cours intensifs</span><small data-i18n="dd-intensifs-sub">Groupe, matin</small></a>
+          <a href="ateliers-thematiques.html"><span data-i18n="dd-ateliers">Ateliers thématiques</span><small data-i18n="dd-ateliers-sub">Groupe, tous niveaux</small></a>
+          <a href="cours-en-entreprise.html"><span data-i18n="dd-entreprise">Cours en entreprise</span><small data-i18n="dd-entreprise-sub">Entreprise, A1 à C1</small></a>
+        </div>
+      </div>
+
+      <!-- その他のリンク -->
+      <a href="#">Séjours linguistiques</a>
+      <a href="../accueil.html#evenements" data-i18n="nav-evenements">Évènements</a>
+      <a href="#">Actualités</a>
+      <a href="../accueil.html#adherer" data-i18n="nav-adherer">Devenir membre</a>
+
+      <!-- L'Alliance ⌄ (Menu déroulant) -->
+      <div class="nav-dropdown">
+        <button class="dd-trigger" aria-expanded="false" aria-haspopup="true">
+          L'Alliance <span class="caret">▾</span>
+        </button>
+        <div class="dd-menu">
+          <a href="qui-sommes-nous.html" data-i18n="nav-qui-menu">Qui sommes-nous ?</a>
+          <a href="../accueil.html#partenaires" data-i18n="nav-partenaires">Nos partenaires</a>
+          <div class="dd-divider"></div>
+          <a href="../accueil.html#faq" data-i18n="nav-faq">FAQ</a>
+          <a href="../accueil.html#contact" data-i18n="nav-contact">Nous contacter</a>
+          <a href="#" data-i18n="nav-don">Faire un don</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 3. 右側：Actions & Outils -->
+    <div class="nav-actions">
+      <a href="#" aria-label="Panier" title="Panier">🛒</a>
+      <a href="#" aria-label="Compte personnel" title="Compte personnel">👤</a>
+      
+      <!-- 言語切り替えドロップダウン -->
+      <div class="nav-dropdown lang-menu">
+        <button class="dd-trigger" aria-expanded="false" aria-haspopup="true">
+          🇫🇷 <span class="caret">▾</span>
+        </button>
+        <div class="dd-menu">
+          <a href="#" data-lang="fr" class="lang-active">🇫🇷 Français</a>
+          <a href="#" data-lang="ja">🇯🇵 日本語</a>
+          <a href="#">🇬🇧 English</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="burger" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="wrap">
+    <a href="../accueil.html">Accueil</a>
+    <span class="sep">/</span>
+    <a href="cours.html">Nos cours</a>
+    <span class="sep">/</span>
+    <span class="current" data-i18n="nav-qui-menu">Qui sommes-nous ?</span>
+  </div>
+</div>
+
+
+<section class="wrap">
+  <div class="page-hero">
+    <span class="eyebrow" data-i18n="nav-qui-menu">Qui sommes-nous</span>
+    <h1 data-i18n="equipe-h1">Rencontrez notre équipe.</h1>
+    <p data-i18n="equipe-lede">L'équipe de l'Alliance Française de Genève est composée de professionnel·les passionné·es par la langue française et les cultures francophones, prêt·es à vous accompagner dans votre parcours.</p>
+  </div>
+</section>
+
+
+
+<section class="wrap team-section">
+  <!-- NOTRE ÉQUIPE ADMINISTRATIVE -->
+  <h2 style="font-size: clamp(20px, 2.5vw, 26px); color: var(--navy); margin-bottom: 30px;" data-i18n="equipe-admin">Notre équipe administrative</h2>
+  <div class="team-members team-members-admin">
+    
+    <div class="member-card">
+      <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
+      <div class="member-info">
+        <div class="member-name">Camille Bobrisow</div>
+        <div class="member-role" data-i18n="role-admin">Équipe administrative</div>
+        <div class="member-desc" data-i18n="desc-admin"></div>
+        <a href="https://www.linkedin.com/in/camille-bobrisow-820697a8/" target="_blank" rel="noopener" class="member-linkedin">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
+      <div class="member-info">
+        <div class="member-name">Cecilia Gallean</div>
+        <div class="member-role" data-i18n="role-admin">Équipe administrative</div>
+        <div class="member-desc" data-i18n="desc-admin"></div>
+        <a href="https://www.linkedin.com/in/cecilia-gallean-861a93266/" target="_blank" rel="noopener" class="member-linkedin">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
+      <div class="member-info">
+        <div class="member-name">Assia Berrouiguet</div>
+        <div class="member-role" data-i18n="role-admin">Équipe administrative</div>
+        <div class="member-desc" data-i18n="desc-admin"></div>
+        <a href="https://www.linkedin.com/in/assiaberrouiguet/" target="_blank" rel="noopener" class="member-linkedin">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
+      <div class="member-info">
+        <div class="member-name">Hippolyte Blanc</div>
+        <div class="member-role" data-i18n="role-admin">Équipe administrative</div>
+        <div class="member-desc" data-i18n="desc-admin"></div>
+        <a href="https://www.linkedin.com/in/hippolyte-blanc-93b99925a/" target="_blank" rel="noopener" class="member-linkedin">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
+      <div class="member-info">
+        <div class="member-name">Flavie Thaize</div>
+        <div class="member-role" data-i18n="role-admin">Équipe administrative</div>
+        <div class="member-desc" data-i18n="desc-admin"></div>
+        <a href="https://www.linkedin.com/in/flavie-thaize/" target="_blank" rel="noopener" class="member-linkedin">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider" style="height: 1px; background: var(--line); margin: 60px 0;"></div>
+
+  <!-- NOS PROFESSEURS -->
+  <h2 style="font-size: clamp(20px, 2.5vw, 26px); color: var(--navy); margin-bottom: 30px;" data-i18n="equipe-prof">Nos professeur·e·s</h2>
+  <div class="team-members">
+    
+    <div class="member-card">
+      <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
+      <div class="member-info">
+        <div class="member-name">Negar Kohan Pour</div>
+        <div class="member-role" data-i18n="role-prof">Professeur·e FLE</div>
+        <div class="member-desc" data-i18n="desc-negar">
+          <details class="profile-accordion">
+            <summary data-i18n="voir-profil">Voir le profil complet</summary>
+            <div class="profile-details-content">
+              <p><strong>🎓 Formation & Spécialités</strong><br>
+              Master en Sciences du langage (FLE/FLS) et Master en littérature française. Doctorante en 4ème année en didactique du FLE.</p>
+              <p><strong>👩‍🏫 Domaines d'enseignement</strong><br>
+              Enseignement du FLE (A1 à B2) pour enfants, adolescents et adultes. Examinatrice-correctrice du DELF.</p>
+              <p><strong>🌍 Expérience pédagogique</strong><br>
+              Expériences en instituts de langue, dont l'Institut français de Téhéran. Habituée aux contextes multiculturels.</p>
+              <p><strong>🗣️ Langues</strong><br>
+              Persan (maternelle), français (avancé), anglais (intermédiaire), espagnol (notions).</p>
+              <p><strong>💬 En résumé</strong><br>
+              Spécialiste de l'enseignement du FLE et examinatrice DELF, j'accompagne les apprenants de tous âges grâce à mon expertise universitaire et mon expérience multiculturelle.</p>
+            </div>
+          </details>
+</div>
+        <a href="#" class="member-linkedin" style="visibility:hidden;">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
+      <div class="member-info">
+        <div class="member-name">Marie Athanasiou</div>
+        <div class="member-role" data-i18n="role-prof">Professeur·e FLE</div>
+        <div class="member-desc" data-i18n="desc-prof"></div>
+        <a href="#" class="member-linkedin" style="visibility:hidden;">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
+      <div class="member-info">
+        <div class="member-name">Livia Sales</div>
+        <div class="member-role" data-i18n="role-prof">Professeur·e FLE</div>
+        <div class="member-desc" data-i18n="desc-prof"></div>
+        <a href="#" class="member-linkedin" style="visibility:hidden;">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
+      <div class="member-info">
+        <div class="member-name">Tiffany Morales</div>
+        <div class="member-role" data-i18n="role-prof">Professeur·e FLE</div>
+        <div class="member-desc" data-i18n="desc-prof"></div>
+        <a href="#" class="member-linkedin" style="visibility:hidden;">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
+      <div class="member-info">
+        <div class="member-name">Mónica Guarín</div>
+        <div class="member-role" data-i18n="role-prof">Professeur·e FLE</div>
+        <div class="member-desc" data-i18n="desc-prof"></div>
+        <a href="#" class="member-linkedin" style="visibility:hidden;">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
+      <div class="member-info">
+        <div class="member-name">Marylene Thomas</div>
+        <div class="member-role" data-i18n="role-prof">Professeur·e FLE</div>
+        <div class="member-desc" data-i18n="desc-prof"></div>
+        <a href="#" class="member-linkedin" style="visibility:hidden;">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
+      <div class="member-info">
+        <div class="member-name">Theresa Elhage</div>
+        <div class="member-role" data-i18n="role-prof">Professeur·e FLE</div>
+        <div class="member-desc" data-i18n="desc-prof"></div>
+        <a href="#" class="member-linkedin" style="visibility:hidden;">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
+      <div class="member-info">
+        <div class="member-name">Valentine Chetail</div>
+        <div class="member-role" data-i18n="role-prof">Professeur·e FLE</div>
+        <div class="member-desc" data-i18n="desc-prof"></div>
+        <a href="#" class="member-linkedin" style="visibility:hidden;">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
+      <div class="member-info">
+        <div class="member-name">Anastasia Kozyreva</div>
+        <div class="member-role" data-i18n="role-prof">Professeur·e FLE</div>
+        <div class="member-desc" data-i18n="desc-prof"></div>
+        <a href="#" class="member-linkedin" style="visibility:hidden;">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
+      <div class="member-info">
+        <div class="member-name">Ilham Sediri Gunner</div>
+        <div class="member-role" data-i18n="role-prof">Professeur·e FLE</div>
+        <div class="member-desc" data-i18n="desc-prof"></div>
+        <a href="#" class="member-linkedin" style="visibility:hidden;">LinkedIn</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="quals">
+  <div class="wrap">
+    <h2>Des qualifications reconnues</h2>
+    <p>Cette diversité d'expériences permet à nos enseignant·es d'adapter leur pédagogie aux besoins, aux objectifs et au profil de chaque apprenant·e — quel que soit son âge, son niveau ou son parcours culturel.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Alliance Française de Genève</p>
+    <p><a href="cours.html">← Retour à nos cours</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
