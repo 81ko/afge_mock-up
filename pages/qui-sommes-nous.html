@@ -231,9 +231,11 @@
 
   /* ---------- PROFILE ACCORDION ---------- */
   .profile-accordion {
-    text-align: left;
     margin-bottom: 16px;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .profile-accordion summary {
     cursor: pointer;
@@ -261,6 +263,8 @@
     border-color: var(--navy);
   }
   .profile-details-content {
+    text-align: left;
+    width: 100%;
     font-size: 13px;
     color: var(--charcoal-soft);
     line-height: 1.6;
@@ -520,7 +524,7 @@
     <div class="member-card">
       <div class="member-photo-placeholder" style="width: 100%; aspect-ratio: 1/1; background: var(--ivory-deep); display: flex; align-items: center; justify-content: center; color: var(--charcoal-soft); font-size: 14px;">Photo</div>
       <div class="member-info">
-        <div class="member-name">Mónica Guarín</div>
+        <div class="member-name" style="display: flex; align-items: center; justify-content: center; gap: 6px;">Mónica Guarín <a href="https://www.instagram.com/reel/DbLSR-GpRLz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener" aria-label="Instagram" style="color: #E1306C; line-height: 0; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 1.76-6.985 6.986-.058 1.28-.072 1.688-.072 4.943s.014 3.663.072 4.943c.205 5.226 2.627 6.786 6.985 6.986 1.28.058 1.688.072 4.947.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-1.76 6.984-6.986.058-1.28.073-1.683.073-4.943s-.015-3.663-.073-4.943c-.202-5.226-2.63-6.786-6.984-6.986-1.28-.058-1.689-.072-4.948-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></div>
         <div class="member-role" data-i18n="role-prof">Professeur·e FLE</div>
         <div class="member-desc" data-i18n="desc-prof"></div>
         <a href="#" class="member-linkedin" style="visibility:hidden;">LinkedIn</a>
