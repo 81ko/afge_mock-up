@@ -25,6 +25,7 @@
   var inPages = /\/pages\//.test(window.location.pathname);
   var localRoot = inPages ? "../" : "";
   var localPages = localRoot + "pages/";
+  var assetRoot = localRoot + "assets/";
   document.querySelectorAll('[data-i18n="nav-evenements"]').forEach(function (link) {
     link.setAttribute("href", localPages + "evenements.html");
   });
@@ -67,8 +68,8 @@
   if (desktopNav && navCta && !desktopNav.querySelector(".nav-utilities")) {
     var utilities = document.createElement("div");
     utilities.className = "nav-utilities";
-    utilities.innerHTML = '<a href="https://afge.ch/panier-achat/" target="_blank" rel="noopener" aria-label="Panier" title="Panier"><span aria-hidden="true">🛒</span><span data-i18n="nav-cart">Panier</span></a>' +
-      '<a href="https://afge.ch/mon-compte-client/" target="_blank" rel="noopener" aria-label="Compte" title="Compte"><span aria-hidden="true">◯</span><span data-i18n="nav-account">Compte</span></a>';
+    utilities.innerHTML = '<a href="https://afge.ch/panier-achat/" target="_blank" rel="noopener" aria-label="Panier" title="Panier"><img src="' + assetRoot + 'img/icons/shopping-cart.svg" alt="" aria-hidden="true"></a>' +
+      '<a href="https://afge.ch/mon-compte-client/" target="_blank" rel="noopener" aria-label="Compte" title="Compte"><img src="' + assetRoot + 'img/icons/user-round.svg" alt="" aria-hidden="true"></a>';
     desktopNav.insertBefore(utilities, navCta);
   }
   if (panel && !panel.querySelector(".mp-new-links")) {
@@ -80,8 +81,8 @@
     mobileExtras.className = "mp-new-links";
     mobileExtras.innerHTML = '<a href="' + localPages + 'faq.html" data-i18n="nav-faq">FAQ</a>' +
       '<a href="' + localPages + 'actualites.html" data-i18n="nav-news">Actualités</a>' +
-      '<a href="https://afge.ch/panier-achat/" target="_blank" rel="noopener" data-i18n="nav-cart">🛒 Panier</a>' +
-      '<a href="https://afge.ch/mon-compte-client/" target="_blank" rel="noopener" data-i18n="nav-account">Compte</a>';
+      '<a class="mobile-utility-icon" href="https://afge.ch/panier-achat/" target="_blank" rel="noopener" aria-label="Panier" title="Panier"><img src="' + assetRoot + 'img/icons/shopping-cart.svg" alt="" aria-hidden="true"></a>' +
+      '<a class="mobile-utility-icon" href="https://afge.ch/mon-compte-client/" target="_blank" rel="noopener" aria-label="Compte" title="Compte"><img src="' + assetRoot + 'img/icons/user-round.svg" alt="" aria-hidden="true"></a>';
     var mobileAbout = panel.querySelector('[data-i18n="nav-qui"]');
     if (mobileAbout) mobileAbout.insertAdjacentElement("afterend", mobileExtras);
   }

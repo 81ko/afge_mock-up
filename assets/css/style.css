@@ -131,10 +131,12 @@ nav.mainnav .wrap{display:flex;align-items:center;justify-content:space-between;
 .nav-dropdown{position:relative;}
 .nav-cta{background:var(--indigo);color:#fff !important;padding:11px 22px;border-radius:999px;font-weight:700;font-size:13.5px;flex-shrink:0;}
 .nav-cta:hover{background:var(--terra);}
-.nav-utilities{display:flex;align-items:center;gap:4px;margin-left:auto;}
-.nav-utilities a{display:flex;align-items:center;gap:5px;padding:8px 9px;border-radius:999px;color:var(--ink-soft);font-size:11px;font-weight:800;white-space:nowrap;}
+.nav-utilities{display:flex;align-items:center;gap:5px;margin-left:auto;}
+.nav-utilities a{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;color:var(--ink-soft);}
+.nav-utilities img,.mobile-utility-icon img{width:20px;height:20px;display:block;}
 .nav-utilities a:hover{background:var(--indigo-soft);color:var(--indigo);}
 .mp-new-links{display:contents;}
+.mobile-utility-icon{display:inline-flex!important;align-items:center;justify-content:center;width:48px;height:48px;padding:0!important;border:1px solid var(--line);border-radius:50%;}
 
 .dd-menu{
   position:absolute;top:100%;left:0;transform:translateY(8px);
