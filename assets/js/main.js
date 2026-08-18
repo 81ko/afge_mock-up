@@ -72,6 +72,15 @@
       news.innerHTML = '<span data-i18n="nav-news">Actualités</span><small>La vie de l’AFGE</small>';
       about.insertAdjacentElement("afterend", news);
     }
+    if (!menu.querySelector('.nav-quiz-link')) {
+      var quizLink = document.createElement("a");
+      quizLink.className = "nav-quiz-link";
+      quizLink.href = localPages + "quiz-francais-suisse.html";
+      quizLink.innerHTML = '<span>Quiz français de Suisse</span><small>30 expressions à découvrir</small>';
+      var partnerLink = menu.querySelector('a[href*="partenaires"]');
+      if (partnerLink) partnerLink.insertAdjacentElement("afterend", quizLink);
+      else about.insertAdjacentElement("afterend", quizLink);
+    }
     var navLinks = dropdown.parentElement;
     if (navLinks && !navLinks.querySelector(":scope > .nav-faq-standalone")) {
       var standaloneFaq = document.createElement("a");
@@ -100,6 +109,7 @@
     mobileExtras.className = "mp-new-links";
     mobileExtras.innerHTML = '<a href="' + localPages + 'faq.html" data-i18n="nav-faq">FAQ</a>' +
       '<a href="' + localPages + 'actualites.html" data-i18n="nav-news">Actualités</a>' +
+      '<a href="' + localPages + 'quiz-francais-suisse.html">Quiz français de Suisse</a>' +
       '<a class="mobile-utility-icon" href="https://afge.ch/panier-achat/" target="_blank" rel="noopener" aria-label="Panier" title="Panier"><img src="' + assetRoot + 'img/icons/shopping-cart.svg" alt="" aria-hidden="true"></a>' +
       '<a class="mobile-utility-icon" href="https://afge.ch/mon-compte-client/" target="_blank" rel="noopener" aria-label="Compte" title="Compte"><img src="' + assetRoot + 'img/icons/user-round.svg" alt="" aria-hidden="true"></a>';
     var mobileAbout = panel.querySelector('[data-i18n="nav-qui"]');
