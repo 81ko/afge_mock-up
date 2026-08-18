@@ -210,6 +210,12 @@ nav.mainnav .wrap{display:flex;align-items:center;justify-content:space-between;
 .page-hero .wrap{grid-template-columns:1.25fr .75fr;}
 .page-symbol{width:min(300px,70vw);aspect-ratio:1;border-radius:50% 50% 36% 50%;background:var(--indigo);color:#F4CDA9;display:flex;align-items:center;justify-content:center;font-family:'Merriweather','Hiragino Mincho ProN','Yu Mincho',serif;font-size:clamp(64px,10vw,116px);font-style:italic;box-shadow:var(--shadow-lg);justify-self:end;}
 .page-symbol img{width:34%;height:34%;display:block;filter:invert(88%) sepia(27%) saturate(545%) hue-rotate(331deg) brightness(103%) contrast(91%);}
+.page-photo{width:100%;aspect-ratio:4/3;border-radius:22px;overflow:hidden;border:7px solid rgba(255,255,255,.78);box-shadow:var(--shadow-lg);background:var(--paper-deep);}
+.page-photo img{width:100%;height:100%;display:block;object-fit:cover;}
+.has-page-photo>svg{display:none;}
+.has-page-photo .page-photo{width:88%;aspect-ratio:1/1;}
+.news-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:56px;}
+.news-hero-grid .page-photo{aspect-ratio:4/3;}
 .center-action{text-align:center;margin-top:40px;}
 .membership-callout{background:var(--indigo-deep);color:#fff;border-radius:var(--radius-lg);padding:44px;display:flex;justify-content:space-between;align-items:center;gap:36px;box-shadow:var(--shadow-md);}
 .membership-callout h2{color:#fff;max-width:23ch;margin-bottom:10px;}
@@ -577,6 +583,8 @@ footer.site-footer .foot-brand p{font-size:13.5px;opacity:.8;max-width:32ch;marg
   .level-grid{grid-template-columns:repeat(2,1fr);}
 }
 @media (max-width:860px){
+  .news-hero-grid{grid-template-columns:1fr;gap:28px;}
+  .has-page-photo .page-photo{width:100%;}
   .nav-links{display:none;}
   .nav-cta{display:none;}
   .burger{display:block;}
