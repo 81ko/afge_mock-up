@@ -7,25 +7,24 @@
 <meta name="description" content="Alliance Française de Genève : cours de français pour tous les niveaux, événements culturels, préparation aux examens et immersion dans la francophonie au cœur de Genève.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="https://afge.ch/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23C8102E'/><text x='32' y='42' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='28' fill='%23F4CDA9' text-anchor='middle'>af</text></svg>">
 
-<!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://afge.ch/">
 <meta property="og:site_name" content="Alliance Française de Genève">
 <meta property="og:title" content="Alliance Française de Genève | Cours de français, culture et communauté francophone">
 <meta property="og:description" content="Alliance Française de Genève : cours de français pour tous les niveaux, événements culturels, préparation aux examens et immersion dans la francophonie au cœur de Genève.">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:image" content="https://afge.ch/wp-content/uploads/2026/02/cropped-NH1VEKNA.jpeg">
+<meta property="og:locale" content="fr_CH">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Alliance Française de Genève | Cours de français, culture et communauté francophone">
 <meta name="twitter:description" content="Alliance Française de Genève : cours de français pour tous les niveaux, événements culturels, préparation aux examens et immersion dans la francophonie au cœur de Genève.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 
-<!-- Structured data: Organization -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -33,10 +32,15 @@
   "name": "Alliance Française de Genève",
   "alternateName": "AFGE",
   "url": "https://afge.ch/",
-  "logo": "https://afge.ch/wp-content/uploads/2026/02/cropped-NH1VEKNA.jpeg",
+  "logo": "https://afge.ch/assets/img/logo.svg",
   "description": "Association culturelle à but non lucratif proposant des cours de français pour tous niveaux, la préparation aux examens et des événements culturels francophones à Genève.",
-  "address": {"@type": "PostalAddress", "addressLocality": "Genève", "addressCountry": "CH"},
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Genève",
+    "addressCountry": "CH"
+  },
   "telephone": "+41786092980",
+  "email": "info@afge.ch",
   "sameAs": [
     "https://www.instagram.com/alliance_francaise.geneve/",
     "https://www.facebook.com/alliancefrancaisegeneve/",
@@ -44,319 +48,92 @@
   ]
 }
 </script>
-
-<!-- Structured data: FAQ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "Comment savoir quel cours de français correspond à mon niveau ?", "acceptedAnswer": {"@type": "Answer", "text": "Un test de placement gratuit évalue votre compréhension écrite, grammaire et vocabulaire pour vous orienter vers le niveau A1 à C2 adapté."}},
-    {"@type": "Question", "name": "Est-il possible de suivre les cours de français à distance ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nos cours sont proposés prioritairement en distanciel, avec des outils numériques interactifs. Le présentiel est envisageable sous certaines conditions."}},
-    {"@type": "Question", "name": "Quels sont les formats de cours proposés et à qui s'adressent-ils ?", "acceptedAnswer": {"@type": "Answer", "text": "L'Alliance Française de Genève accompagne enfants et adultes (dès 15 ans) dans des cours de groupe ou individuels, ainsi que les entreprises et des ateliers thématiques."}},
-    {"@type": "Question", "name": "Proposez-vous des examens officiels comme le DELF ou le DALF ?", "acceptedAnswer": {"@type": "Answer", "text": "L'Alliance Française de Genève n'est pas encore centre d'examen officiel, mais propose des cours et modules de préparation spécifiques à ces certifications."}},
-    {"@type": "Question", "name": "Quels sont les avantages à devenir membre de l'Alliance Française de Genève ?", "acceptedAnswer": {"@type": "Answer", "text": "Tarifs préférentiels sur les événements et chez nos partenaires, accès prioritaire aux activités culturelles, et accès à Culturethèque, la bibliothèque numérique des Alliances Françaises."}},
-    {"@type": "Question", "name": "Comment adhérer à l'Alliance Française de Genève ?", "acceptedAnswer": {"@type": "Answer", "text": "L'adhésion annuelle se fait entièrement en ligne, en quelques minutes, en créant un compte personnel puis en réglant la cotisation par paiement électronique."}}
+    {
+      "@type": "Question",
+      "name": "Comment savoir quel cours de français correspond à mon niveau ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un test de placement gratuit évalue votre compréhension écrite, grammaire et vocabulaire pour vous orienter vers le niveau A1 à C2 adapté."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Est-il possible de suivre les cours de français à distance ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, nos cours sont proposés prioritairement en distanciel, avec des outils numériques interactifs. Le présentiel est envisageable sous certaines conditions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les formats de cours proposés et à qui s'adressent-ils ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'Alliance Française de Genève accompagne enfants et adultes (dès 15 ans) dans des cours de groupe ou individuels, ainsi que les entreprises et des ateliers thématiques."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Proposez-vous des examens officiels comme le DELF ou le DALF ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'Alliance Française de Genève n'est pas encore centre d'examen officiel, mais propose des cours et modules de préparation spécifiques à ces certifications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les avantages à devenir membre de l'Alliance Française de Genève ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tarifs préférentiels sur les événements et chez nos partenaires, accès prioritaire aux activités culturelles, et accès à Culturethèque, la bibliothèque numérique des Alliances Françaises."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment adhérer à l'Alliance Française de Genève ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'adhésion annuelle se fait entièrement en ligne, en quelques minutes, en créant un compte personnel puis en réglant la cotisation par paiement électronique."
+      }
+    }
   ]
 }
 </script>
-
-<style>
-  :root{
-    --ivory:#FAFAF8;
-    --ivory-deep:#F1F0EC;
-    --navy:#C8102E;
-    --navy-deep:#8F0B20;
-    --ochre:#1A1A1A;
-    --ochre-soft:#F1E4E1;
-    --on-red:#F6D9D2;
-    --charcoal:#1A1A1A;
-    --charcoal-soft:#5C5C5C;
-    --line:#E2E0DC;
-    --radius:14px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{background:var(--ivory);color:var(--charcoal);font-family:'Inter',sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;}
-  h1,h2,h3,.display{font-family:'Fraunces',serif;font-weight:600;letter-spacing:-0.01em;}
-  a{color:inherit;text-decoration:none;}
-  img{max-width:100%;display:block;}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
-  :focus-visible{outline:3px solid var(--ochre);outline-offset:2px;}
-
-  /* ---------- NAV ---------- */
-  .topbar{background:var(--navy);color:#EDE7D6;font-size:13px;}
-  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:36px;}
-  .topbar a{opacity:.85;}
-  .topbar a:hover{opacity:1;}
-  .topbar-links{display:flex;gap:20px;}
-  .lang-switch{display:flex;gap:10px;opacity:.85;}
-  .lang-switch a{cursor:pointer;}
-  .lang-switch a.lang-active{opacity:1;font-weight:700;text-decoration:underline;text-underline-offset:3px;}
-  nav.mainnav{position:sticky;top:0;z-index:50;background:rgba(250,246,238,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
-  nav.mainnav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;}
-  .brand{display:flex;align-items:center;gap:10px;}
-  .brand-mark{font-family:'Fraunces',serif;font-style:italic;font-weight:700;font-size:26px;color:var(--navy);line-height:1;}
-  .brand-divider{width:1px;height:30px;background:var(--line);}
-  .brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:16px;line-height:1.2;color:var(--charcoal);}
-  .brand-name span{display:block;font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:12px;color:var(--charcoal-soft);}
-  .nav-links{display:flex;gap:30px;align-items:center;}
-  .nav-links > a{font-size:14.5px;font-weight:600;padding:8px 2px;position:relative;}
-  .nav-links > a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--ochre);transform:scaleX(0);transition:transform .2s ease;transform-origin:left;}
-  .nav-links > a:hover::after{transform:scaleX(1);}
-  .nav-cta{background:var(--navy);color:#fff !important;padding:10px 20px;border-radius:999px;font-weight:600;font-size:14px;white-space:nowrap;}
-  .nav-cta:hover{background:var(--navy-deep);}
-  .burger{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--navy);}
-
-  /* NAV DROPDOWN */
-  .nav-dropdown{position:relative;}
-  .nav-dropdown > .dd-trigger{
-    display:flex;align-items:center;gap:5px;font-size:14.5px;font-weight:600;
-    padding:8px 2px;cursor:pointer;background:none;border:none;color:inherit;font-family:inherit;
-  }
-  .nav-dropdown > .dd-trigger::after{
-    content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--ochre);
-    transform:scaleX(0);transition:transform .2s ease;transform-origin:left;
-  }
-  .nav-dropdown:hover > .dd-trigger::after,.nav-dropdown:focus-within > .dd-trigger::after{transform:scaleX(1);}
-  .dd-trigger .caret{font-size:10px;transition:transform .2s ease;}
-  .nav-dropdown:hover .dd-trigger .caret,.nav-dropdown:focus-within .dd-trigger .caret{transform:rotate(180deg);}
-  .dd-menu{
-    position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);
-    background:#fff;border:1px solid var(--line);border-radius:14px;
-    box-shadow:0 20px 44px rgba(0,0,0,.14);padding:10px;width:280px;
-    opacity:0;visibility:hidden;transition:opacity .18s ease, transform .18s ease, visibility .18s ease;
-    z-index:60;
-  }
-  .nav-dropdown:hover .dd-menu,.nav-dropdown:focus-within .dd-menu{
-    opacity:1;visibility:visible;transform:translateX(-50%) translateY(2px);
-  }
-  .dd-menu a{
-    display:flex;flex-direction:column;gap:2px;padding:10px 14px;border-radius:8px;
-    font-size:13.5px;font-weight:600;color:var(--charcoal);
-  }
-  .dd-menu a:hover{background:var(--ivory-deep);color:var(--navy);}
-  .dd-menu a small{font-weight:400;font-size:12px;color:var(--charcoal-soft);}
-  .dd-heading{
-    padding:8px 14px 6px;font-size:11px;font-weight:700;letter-spacing:.06em;
-    text-transform:uppercase;color:var(--charcoal-soft);
-  }
-  .dd-menu .dd-divider{height:1px;background:var(--line);margin:8px 4px;}
-  .dd-menu .dd-viewall{color:var(--navy);font-weight:700;}
-
-  /* ---------- HERO ---------- */
-  .hero{padding:76px 0 64px;position:relative;overflow:hidden;}
-  .hero::before{
-    content:"";position:absolute;top:-120px;right:-160px;width:520px;height:520px;
-    border-radius:50%;background:radial-gradient(circle at 30% 30%, var(--ochre-soft), transparent 70%);opacity:.7;
-  }
-  .hero .wrap{display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;align-items:center;position:relative;}
-  .eyebrow{
-    display:inline-flex;align-items:center;gap:8px;
-    font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-    color:var(--navy);background:var(--ochre-soft);
-    padding:7px 14px;border-radius:999px;margin-bottom:22px;
-  }
-  .hero h1{font-size:clamp(34px,4.6vw,54px);line-height:1.06;color:var(--navy);max-width:16ch;margin-bottom:22px;}
-  .hero h1 em{font-style:italic;color:var(--ochre);}
-  .hero p.lede{font-size:17.5px;color:var(--charcoal-soft);max-width:46ch;margin-bottom:32px;}
-  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
-  .btn{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:14px 26px;border-radius:999px;font-weight:700;font-size:15px;
-    transition:transform .15s ease, box-shadow .15s ease;
-  }
-  .btn-primary{background:var(--navy);color:#fff;}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(30,42,74,.25);}
-  .btn-ghost{border:1.5px solid var(--navy);color:var(--navy);}
-  .btn-ghost:hover{background:var(--navy);color:#fff;}
-  .hero-photo{border-radius:20px;overflow:hidden;position:relative;aspect-ratio:4/3.2;box-shadow:0 24px 50px rgba(0,0,0,.14);}
-  .hero-photo img{width:100%;height:100%;object-fit:cover;}
-  .hero-photo .badge{
-    position:absolute;left:20px;bottom:20px;
-    background:#fff;border-radius:14px;padding:16px 20px;
-    box-shadow:0 12px 28px rgba(0,0,0,.16);display:flex;gap:22px;
-  }
-  .hero-photo .badge .stat b{display:block;font-family:'Fraunces',serif;font-size:20px;color:var(--navy);}
-  .hero-photo .badge .stat span{font-size:11.5px;color:var(--charcoal-soft);}
-
-  /* ---------- INTRO STATEMENT ---------- */
-  .intro{padding:10px 0 70px;}
-  .intro .wrap{max-width:760px;}
-  .intro p{font-size:17px;color:var(--charcoal-soft);line-height:1.7;}
-  .intro p + p{margin-top:16px;}
-
-  /* ---------- EVENTS TEASER ---------- */
-  .events-teaser{background:var(--ivory-deep);padding:56px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .events-teaser .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
-  .events-teaser h2{font-size:clamp(22px,2.6vw,28px);color:var(--navy);}
-  .events-teaser p{color:var(--charcoal-soft);font-size:15px;margin-top:6px;}
-
-  /* ---------- MISSION / A PROPOS ---------- */
-  .mission{background:var(--navy);color:#FBEAE7;padding:76px 0;}
-  .mission .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
-  .mission h2{font-size:clamp(26px,3vw,34px);margin-bottom:16px;}
-  .mission h2 em{color:var(--on-red);font-style:italic;}
-  .mission p{opacity:.85;font-size:16px;margin-bottom:22px;}
-  .mission .figures{display:flex;gap:36px;flex-wrap:wrap;}
-  .mission .figures div b{display:block;font-family:'Fraunces',serif;font-size:30px;color:var(--on-red);}
-  .mission .figures div span{font-size:12.5px;opacity:.7;}
-  .mission .btn-ghost{border-color:rgba(255,255,255,.5);color:#fff;}
-  .mission .btn-ghost:hover{background:#EDE7D6;color:var(--navy);}
-  .mission-photo{border-radius:20px;overflow:hidden;aspect-ratio:4/3.3;box-shadow:0 24px 50px rgba(0,0,0,.28);}
-  .mission-photo img{width:100%;height:100%;object-fit:cover;}
-
-  /* ---------- LEVEL TEST CTA (simple, not full A1-C2 breakdown) ---------- */
-  .leveltest{padding:76px 0;}
-  .leveltest .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
-  .leveltest h2{font-size:clamp(26px,3vw,34px);color:var(--navy);margin-bottom:16px;line-height:1.2;}
-  .leveltest p{color:var(--charcoal-soft);font-size:16px;margin-bottom:26px;}
-  .leveltest .path-mini{display:flex;gap:6px;}
-  .leveltest .path-mini span{
-    flex:1;text-align:center;padding:12px 4px;border-radius:10px;
-    background:#fff;border:1px solid var(--line);
-    font-family:'Fraunces',serif;font-weight:700;color:var(--navy);font-size:15px;
-  }
-
-  /* ---------- EVENT SPOTLIGHT ---------- */
-  .event{padding:76px 0;background:var(--ivory-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .event .wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;align-items:center;}
-  .event-img{aspect-ratio:4/5;border-radius:18px;display:flex;align-items:flex-end;padding:24px;color:#EDE7D6;position:relative;overflow:hidden;}
-  .event-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-  .event-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(20,29,51,.05) 40%, rgba(20,29,51,.75) 100%);}
-  .event-img .tag{position:relative;z-index:2;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--on-red);}
-  .event h2{font-size:clamp(26px,3vw,34px);color:var(--navy);margin:14px 0 16px;line-height:1.15;}
-  .event p{color:var(--charcoal-soft);font-size:16px;margin-bottom:14px;}
-  .event .meta{display:flex;gap:22px;margin:22px 0;flex-wrap:wrap;}
-  .event .meta div{font-size:13.5px;}
-  .event .meta b{display:block;color:var(--navy);font-family:'Fraunces',serif;font-size:15px;}
-
-  /* ---------- FAQ ---------- */
-  .faq{padding:76px 0;}
-  .faq .head{max-width:600px;margin-bottom:36px;}
-  .faq h2{font-size:clamp(26px,3vw,34px);color:var(--navy);}
-  .faq-item{border-bottom:1px solid var(--line);}
-  .faq-item summary{list-style:none;cursor:pointer;padding:20px 4px;display:flex;justify-content:space-between;align-items:center;gap:20px;font-weight:600;font-size:16px;color:var(--navy);}
-  .faq-item summary::-webkit-details-marker{display:none;}
-  .faq-item summary .plus{font-family:'Fraunces',serif;font-size:20px;color:var(--ochre);transition:transform .2s ease;flex-shrink:0;}
-  .faq-item[open] summary .plus{transform:rotate(45deg);}
-  .faq-item .a{padding:0 4px 22px;color:var(--charcoal-soft);font-size:15px;max-width:70ch;}
-
-  /* ---------- CONTACT TEASER ---------- */
-  .contact-teaser{background:var(--ivory-deep);padding:60px 0;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .contact-teaser h2{font-size:clamp(24px,3vw,30px);color:var(--navy);margin-bottom:10px;}
-  .contact-teaser p{color:var(--charcoal-soft);margin-bottom:24px;}
-
-  /* ---------- PARTNERS marquee ---------- */
-  .partners{padding:56px 0;overflow:hidden;}
-  .partners .label{text-align:center;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--charcoal-soft);margin-bottom:26px;}
-  .marquee{width:100%;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
-  .marquee-track{display:flex;gap:56px;width:max-content;animation:scroll 32s linear infinite;align-items:center;}
-  .marquee-track span{font-family:'Fraunces',serif;font-size:16px;color:var(--charcoal-soft);opacity:.6;white-space:nowrap;}
-  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-
-  /* ---------- FOOTER CTA ---------- */
-  .footer-cta{background:var(--ochre-soft);padding:60px 0;text-align:center;}
-  .footer-cta h2{font-size:clamp(24px,3vw,32px);color:var(--navy);margin-bottom:10px;}
-  .footer-cta p{color:var(--charcoal-soft);margin-bottom:26px;}
-
-  footer{background:#161616;color:#B8B8B6;padding:56px 0 28px;}
-  footer .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:40px;}
-  footer h4{color:#EDE7D6;font-size:13px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:16px;font-family:'Inter',sans-serif;}
-  footer ul{list-style:none;}
-  footer li{margin-bottom:10px;}
-  footer a{font-size:14px;color:#B8BFD1;}
-  footer a:hover{color:var(--on-red);}
-  footer .foot-brand p{font-size:14px;opacity:.75;max-width:32ch;margin-top:10px;}
-  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;font-size:12.5px;opacity:.6;flex-wrap:wrap;gap:10px;}
-
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width:860px){
-    .nav-links{display:none;}
-    .burger{display:block;}
-    .hero .wrap,.event .wrap,.mission .wrap,.leveltest .wrap{grid-template-columns:1fr;}
-    .hero-photo .badge{gap:16px;padding:14px 16px;}
-    .events-teaser .wrap{flex-direction:column;align-items:flex-start;}
-    footer .fgrid{grid-template-columns:1fr 1fr;}
-  }
-  @media (prefers-reduced-motion:reduce){
-    .marquee-track{animation:none;}
-    *{transition:none !important;}
-  }
-
-  /* 右側のアクション＆ツールアイコン用スタイル */
-  .nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 18px; /* アイコン間の余白 */
-  }
-
-  .nav-actions > a {
-    font-size: 20px; /* アイコンのサイズ */
-    text-decoration: none;
-    transition: transform 0.2s ease;
-  }
-
-  .nav-actions > a:hover {
-    transform: translateY(-2px); /* ホバー時に少し浮き上がるエフェクト */
-  }
-
-  /* 一番右の言語切り替えドロップダウンが画面外にはみ出ないようにする調整 */
-  .lang-menu .dd-menu {
-    left: auto;
-    right: -10px;
-    transform: translateX(0) translateY(6px);
-    width: auto;
-    min-width: 130px;
-  }
-  .lang-menu:hover .dd-menu, .lang-menu:focus-within .dd-menu {
-    transform: translateX(0) translateY(2px);
-  }
-
-  /* メニュー項目が増えたので中央メニューの隙間を少し調整 */
-  .nav-links {
-    gap: 20px;
-  }
-</style>
 </head>
 <body>
-
 <div class="topbar">
   <div class="wrap">
     <div class="topbar-links">
-      <a href="#contact">+41 78 609 29 80</a>
-      <a href="#contact" data-i18n="topbar-contact">Nous contacter</a>
+      <a href="tel:+41786092980">+41 78 609 29 80</a>
+      <a href="index.html#contact" data-i18n="topbar-contact">Nous contacter</a>
     </div>
     <div class="lang-switch">
-      <a href="#" data-lang="fr" class="lang-active">FR</a><a href="#" data-lang="ja">JA</a><a href="#">EN</a><a href="#">DE</a><a href="#">IT</a>
+      <button data-lang="fr" class="active">FR</button>
+      <button data-lang="ja">日本語</button>
     </div>
   </div>
 </div>
-
 <nav class="mainnav">
   <div class="wrap">
-    
-    <!-- 1. 左側：Logo AFGE (l'Accueil) -->
-    <a href="accueil.html" class="brand">
-      <span class="brand-mark">af</span>
-      <span class="brand-divider"></span>
-      <span class="brand-name">Alliance Française<span>Genève – Suisse</span></span>
+    <a href="index.html" class="brand">
+      <img class="brand-logo" src="assets/img/brand/afge-horizontal.jpg" alt="Alliance Française Genève – Suisse">
     </a>
 
-    <!-- 2. 中央：メインメニュー -->
     <div class="nav-links">
-      
-      <!-- Cours de français (Cours)(test)(eachCours) -->
-      <div class="nav-dropdown">
+      <div class="nav-dropdown mega">
         <button class="dd-trigger" aria-expanded="false" aria-haspopup="true">
           <span data-i18n="nav-cours">Cours de français</span> <span class="caret">▾</span>
         </button>
         <div class="dd-menu">
-          <a href="pages/cours.html" class="dd-viewall" data-i18n="dd-viewall-top">Cours (Vue d'ensemble)</a>
-          <div class="dd-divider"></div>
-          <a href="accueil.html#niveau"><span data-i18n="nav-niveau">Test de placement</span><small data-i18n="niveau-sub">Gratuit, en ligne</small></a>
-          <div class="dd-divider"></div>
-          <div class="dd-heading" data-i18n="dd-heading-cours">Nos Cours</div>
+          <a href="index.html#niveau" style="grid-column:1/-1;background:var(--indigo-soft);">
+            <span data-i18n="nav-niveau">Test de placement</span><small data-i18n="nav-niveau-sub">Gratuit, en ligne — trouvez votre niveau A1 à C2</small>
+          </a>
+          <div class="dd-heading" data-i18n="dd-heading-cours">Nos cours</div>
           <a href="pages/cours-particuliers-adultes.html"><span data-i18n="dd-adultes">Cours particuliers adultes</span><small data-i18n="dd-adultes-sub">Individuel, A1 à C1</small></a>
           <a href="pages/cours-particuliers-enfants.html"><span data-i18n="dd-enfants">Cours particuliers enfants</span><small data-i18n="dd-enfants-sub">Individuel, A1 à C1</small></a>
           <a href="pages/cours-du-soir-french-essentials.html"><span data-i18n="dd-essentials">Cours du soir : French Essentials</span><small data-i18n="dd-essentials-sub">Groupe, A1 · A2</small></a>
@@ -364,388 +141,300 @@
           <a href="pages/cours-intensifs.html"><span data-i18n="dd-intensifs">Cours intensifs</span><small data-i18n="dd-intensifs-sub">Groupe, matin</small></a>
           <a href="pages/ateliers-thematiques.html"><span data-i18n="dd-ateliers">Ateliers thématiques</span><small data-i18n="dd-ateliers-sub">Groupe, tous niveaux</small></a>
           <a href="pages/cours-en-entreprise.html"><span data-i18n="dd-entreprise">Cours en entreprise</span><small data-i18n="dd-entreprise-sub">Entreprise, A1 à C1</small></a>
+          <a href="pages/cours.html" class="dd-viewall"><span data-i18n="nav-cours-overview">Voir tous les cours</span><small data-i18n="nav-cours-overview-sub">Comparer formats, niveaux et tarifs →</small></a>
         </div>
       </div>
 
-      <!-- その他のリンク -->
-      <a href="#">Séjours linguistiques</a>
-      <a href="accueil.html#evenements" data-i18n="nav-evenements">Évènements</a>
-      <a href="#">Actualités</a>
-      <a href="accueil.html#adherer" data-i18n="nav-adherer">Devenir membre</a>
+      <a href="pages/sejours-linguistiques.html" data-i18n="nav-sejours">Séjours linguistiques</a>
+      <a href="index.html#evenements" data-i18n="nav-evenements">Évènements</a>
 
-      <!-- L'Alliance ⌄ (Menu déroulant) -->
       <div class="nav-dropdown">
         <button class="dd-trigger" aria-expanded="false" aria-haspopup="true">
-          L'Alliance <span class="caret">▾</span>
+          <span data-i18n="nav-alliance">L'Alliance</span> <span class="caret">▾</span>
         </button>
-        <div class="dd-menu">
-          <a href="pages/qui-sommes-nous.html" data-i18n="nav-qui-menu">Qui sommes-nous ?</a>
-          <a href="accueil.html#partenaires" data-i18n="nav-partenaires">Nos partenaires</a>
+        <div class="dd-menu" style="width:250px;">
+          <a href="pages/qui-sommes-nous.html" data-i18n="nav-qui">Qui sommes-nous ?</a>
+          <a href="index.html#partenaires" data-i18n="nav-partenaires">Nos partenaires</a>
           <div class="dd-divider"></div>
-          <a href="accueil.html#faq" data-i18n="nav-faq">FAQ</a>
-          <a href="accueil.html#contact" data-i18n="nav-contact">Nous contacter</a>
-          <a href="#" data-i18n="nav-don">Faire un don</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- 3. 右側：Actions & Outils -->
-    <div class="nav-actions">
-      <a href="#" aria-label="Panier" title="Panier">🛒</a>
-      <a href="#" aria-label="Compte personnel" title="Compte personnel">👤</a>
-      
-      <!-- 言語切り替えドロップダウン -->
-      <div class="nav-dropdown lang-menu">
-        <button class="dd-trigger" aria-expanded="false" aria-haspopup="true">
-          🇫🇷 <span class="caret">▾</span>
-        </button>
-        <div class="dd-menu">
-          <a href="#" data-lang="fr" class="lang-active">🇫🇷 Français</a>
-          <a href="#" data-lang="ja">🇯🇵 日本語</a>
-          <a href="#">🇬🇧 English</a>
+          <a href="index.html#faq" data-i18n="nav-faq">FAQ</a>
+          <a href="index.html#contact" data-i18n="nav-contact">Nous contacter</a>
+          <a href="mailto:info@afge.ch?subject=Don" data-i18n="nav-don">Faire un don</a>
         </div>
       </div>
     </div>
 
-    <button class="burger" aria-label="Menu">☰</button>
+    <a href="index.html#adherer" class="btn nav-cta" data-i18n="nav-adherer">Devenir membre →</a>
+    <button class="burger" id="navBurger" aria-label="Menu">☰</button>
   </div>
 </nav>
 
+<div class="mobile-panel">
+  <div class="mp-top">
+    <a href="index.html" class="brand">
+      <img class="brand-logo" src="assets/img/brand/afge-horizontal.jpg" alt="Alliance Française Genève – Suisse">
+    </a>
+    <button class="mp-close" id="mpClose" aria-label="Fermer">✕</button>
+  </div>
+  <a href="pages/cours.html" data-i18n="nav-cours-overview">Voir tous les cours</a>
+  <a href="index.html#niveau" data-i18n="nav-niveau">Test de placement</a>
+  <div class="mp-group-label" data-i18n="dd-heading-cours">Nos cours</div>
+  <a class="mp-sub" href="pages/cours-particuliers-adultes.html" data-i18n="dd-adultes">Cours particuliers adultes</a>
+  <a class="mp-sub" href="pages/cours-particuliers-enfants.html" data-i18n="dd-enfants">Cours particuliers enfants</a>
+  <a class="mp-sub" href="pages/cours-du-soir-french-essentials.html" data-i18n="dd-essentials">Cours du soir : French Essentials</a>
+  <a class="mp-sub" href="pages/cours-du-soir-french-in-action.html" data-i18n="dd-action">Cours du soir : French in Action</a>
+  <a class="mp-sub" href="pages/cours-intensifs.html" data-i18n="dd-intensifs">Cours intensifs</a>
+  <a class="mp-sub" href="pages/ateliers-thematiques.html" data-i18n="dd-ateliers">Ateliers thématiques</a>
+  <a class="mp-sub" href="pages/cours-en-entreprise.html" data-i18n="dd-entreprise">Cours en entreprise</a>
+  <a href="pages/sejours-linguistiques.html" data-i18n="nav-sejours">Séjours linguistiques</a>
+  <a href="index.html#evenements" data-i18n="nav-evenements">Évènements</a>
+  <a href="pages/qui-sommes-nous.html" data-i18n="nav-qui">Qui sommes-nous ?</a>
+  <a href="index.html#faq" data-i18n="nav-faq">FAQ</a>
+  <a href="index.html#contact" data-i18n="nav-contact">Nous contacter</a>
+  <a href="index.html#adherer" class="btn btn-primary btn-block" style="margin-top:20px;" data-i18n="nav-adherer">Devenir membre →</a>
+</div>
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="eyebrow" data-i18n="hero-eyebrow">870 alliances · 135 pays</span>
-      <h1 data-i18n="hero-h1">Apprenez le français <em>et créez du lien.</em></h1>
-      <p class="lede" data-i18n="hero-lede">Avec l'Alliance Française de Genève, la maîtrise du français n'est pas seulement une compétence linguistique : c'est une condition d'accès à l'emploi, aux droits, à la santé, à l'école et à la participation citoyenne.</p>
+      <span class="eyebrow"><span data-i18n="hero-eyebrow" style="display:contents">870 alliances · 135 pays</span></span>
+      <h1><span data-i18n="hero-h1" style="display:contents">Apprenez le français <em>et créez du lien.</em></span></h1>
+      <p class="lede"><span data-i18n="hero-lede" style="display:contents">Avec l'Alliance Française de Genève, la maîtrise du français n'est pas seulement une compétence linguistique : c'est une condition d'accès à l'emploi, aux droits, à la santé, à l'école et à la participation citoyenne.</span></p>
       <div class="hero-actions">
-        <a href="pages/cours.html" class="btn btn-primary" data-i18n="hero-btn1">Découvrir nos cours →</a>
-        <a href="#niveau" class="btn btn-ghost" data-i18n="hero-btn2">Faire le test de niveau</a>
+        <a href="pages/cours.html" class="btn btn-primary"><span data-i18n="hero-btn1" style="display:contents">Découvrir nos cours →</span></a>
+        <a href="#niveau" class="btn btn-ghost"><span data-i18n="hero-btn2" style="display:contents">Faire le test de niveau</span></a>
       </div>
     </div>
-    <div class="hero-photo">
-      <img src="pages/img/geneve-hero.jpg" alt="Vue du lac Léman et de la ville de Genève au crépuscule, avec la Grande Roue">
-      <div class="badge">
-        <div class="stat"><b>870+</b><span data-i18n="hero-stat1">Alliances dans le monde</span></div>
-        <div class="stat"><b>A1–C2</b><span data-i18n="hero-stat2">Tous niveaux CECR</span></div>
-      </div>
-    </div>
+    <div class="hero-art hero-art-geneva">
+  <figure class="geneva-photo">
+    <img src="assets/img/geneva-panorama.jpg" alt="Vue panoramique de Genève, du lac Léman et du Jet d’Eau" width="1280" height="328" fetchpriority="high">
+  </figure>
+  <div class="float-badge"><div class="stat"><b>870+</b><span><span data-i18n="hero-stat1" style="display:contents">Alliances dans le monde</span></span></div><div class="stat"><b>A1–C2</b><span><span data-i18n="hero-stat2" style="display:contents">Tous niveaux CECR</span></span></div></div>
+  <div class="float-badge2"><span data-i18n="hero-badge3" style="display:contents">🇨🇭 Genève, Suisse</span></div>
+</div>
   </div>
 </section>
-
 <section class="intro">
-  <div class="wrap">
-    <p data-i18n="intro-p1">Rejoignez une communauté inclusive et vivez la langue française au quotidien avec nos expert·e·s passionné·e·s.</p>
-    <p data-i18n="intro-p2">L'Alliance Française de Genève souhaite que les personnes qui arrivent à Genève puissent non seulement apprendre le français, mais aussi trouver leur place dans la vie culturelle et citoyenne de la ville. Voilà pourquoi nous avons créé des parcours d'intégration linguistique, sociale et culturelle avec des cours sur tous les niveaux du CECR et des évènements pédagogiques adaptés pour chaque niveau.</p>
+  <div class="wrap-narrow">
+    <p><span data-i18n="intro-p1" style="display:contents">Rejoignez une communauté inclusive et vivez la langue française au quotidien avec nos expert·es passionné·es.</span></p>
+    <p><span data-i18n="intro-p2" style="display:contents">L'Alliance Française de Genève souhaite que les personnes qui arrivent à Genève puissent non seulement apprendre le français, mais aussi trouver leur place dans la vie culturelle et citoyenne de la ville. Voilà pourquoi nous avons créé des parcours d'intégration linguistique, sociale et culturelle avec des cours sur tous les niveaux du CECR et des évènements pédagogiques adaptés pour chaque niveau.</span></p>
   </div>
 </section>
-
-<section class="events-teaser">
+<section class="section tinted">
   <div class="wrap">
-    <div>
-      <h2 data-i18n="events-h2">Nos Évènements</h2>
-      <p data-i18n="events-p">Ateliers, rencontres et sorties culturelles tout au long de l'année.</p>
+    <div class="section-head">
+      <span class="eyebrow"><span data-i18n="courses-eyebrow" style="display:contents">Nos cours</span></span>
+      <h2><span data-i18n="courses-h2" style="display:contents">Un format pour chaque objectif.</span></h2>
+      <p><span data-i18n="courses-body" style="display:contents">Particuliers, en groupe, intensifs ou en entreprise — comparez tous nos formats et tarifs.</span></p>
     </div>
-    <a href="#evenements" class="btn btn-ghost" data-i18n="events-btn">En savoir plus →</a>
+    <div class="grid grid-4">
+      
+      <a href="pages/cours-particuliers-adultes.html" class="course-card">
+        <div class="tag-row"><span class="tag terra"><span data-i18n="fc0-tag" style="display:contents">Individuel</span></span></div>
+        <h3><span data-i18n="fc0-title" style="display:contents">Cours particuliers adultes</span></h3>
+        <p><span data-i18n="fc0-desc" style="display:contents">Cours 100% individuels, à domicile ou en ligne, adaptés à vos objectifs professionnels ou personnels.</span></p>
+        <span class="cc-link"><span data-i18n="fc-cta" style="display:contents">Découvrir →</span></span>
+      </a>
+      <a href="pages/cours-du-soir-french-essentials.html" class="course-card">
+        <div class="tag-row"><span class="tag"><span data-i18n="fc1-tag" style="display:contents">Groupe</span></span></div>
+        <h3><span data-i18n="fc1-title" style="display:contents">Cours du soir : French Essentials</span></h3>
+        <p><span data-i18n="fc1-desc" style="display:contents">Deux séances hebdomadaires en ligne pour poser des bases solides en français.</span></p>
+        <span class="cc-link"><span data-i18n="fc-cta" style="display:contents">Découvrir →</span></span>
+      </a>
+      <a href="pages/cours-intensifs.html" class="course-card">
+        <div class="tag-row"><span class="tag"><span data-i18n="fc2-tag" style="display:contents">Groupe</span></span></div>
+        <h3><span data-i18n="fc2-title" style="display:contents">Cours intensifs</span></h3>
+        <p><span data-i18n="fc2-desc" style="display:contents">Immersion intensive du lundi au vendredi, le matin, pour progresser rapidement.</span></p>
+        <span class="cc-link"><span data-i18n="fc-cta" style="display:contents">Découvrir →</span></span>
+      </a>
+      <a href="pages/cours-en-entreprise.html" class="course-card">
+        <div class="tag-row"><span class="tag terra"><span data-i18n="fc3-tag" style="display:contents">Entreprise</span></span></div>
+        <h3><span data-i18n="fc3-title" style="display:contents">Cours en entreprise</span></h3>
+        <p><span data-i18n="fc3-desc" style="display:contents">Programmes sur-mesure pour vos équipes, en entreprise ou en ligne.</span></p>
+        <span class="cc-link"><span data-i18n="fc-cta" style="display:contents">Découvrir →</span></span>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a href="pages/cours.html" class="btn btn-ghost"><span data-i18n="courses-viewall" style="display:contents">Voir tous les cours →</span></a>
+    </div>
   </div>
 </section>
-
+<section class="section" style="padding:56px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+    <div>
+      <h2 style="font-size:clamp(22px,2.6vw,28px);"><span data-i18n="events-h2" style="display:contents">Nos Évènements</span></h2>
+      <p style="color:var(--ink-soft);font-size:15px;margin-top:6px;"><span data-i18n="events-p" style="display:contents">Ateliers, rencontres et sorties culturelles tout au long de l'année.</span></p>
+    </div>
+    <a href="#evenements" class="btn btn-ghost"><span data-i18n="events-btn" style="display:contents">En savoir plus →</span></a>
+  </div>
+</section>
 <section class="mission" id="qui-sommes-nous">
   <div class="wrap">
     <div>
-      <span class="eyebrow" style="background:rgba(255,255,255,.14);color:var(--on-red);" data-i18n="mission-eyebrow">À propos de l'Alliance Française de Genève</span>
-      <h2 data-i18n="mission-h2">Un maillon d'un réseau <em>mondial</em>, ancré à Genève.</h2>
-      <p data-i18n="mission-p">À Genève, l'Alliance Française représente l'un des nombreux maillons d'une chaîne internationale, reliant aujourd'hui plus de 870 alliances à travers plus de 135 pays. La mission commune animant ces milliers de professeur·e·s et employé·e·s est la suivante : transmettre la langue française, partager les cultures francophones, et ainsi faire vivre une communauté internationale riche et diverse.</p>
+      <span class="eyebrow on-dark"><span data-i18n="mission-eyebrow" style="display:contents">À propos de l'Alliance Française de Genève</span></span>
+      <h2><span data-i18n="mission-h2" style="display:contents">Un maillon d'un réseau <em>mondial</em>, ancré à Genève.</span></h2>
+      <p><span data-i18n="mission-p" style="display:contents">À Genève, l'Alliance Française représente l'un des nombreux maillons d'une chaîne internationale, reliant aujourd'hui plus de 870 alliances à travers plus de 135 pays. La mission commune animant ces milliers de professeur·es et employé·es est la suivante : transmettre la langue française, partager les cultures francophones, et ainsi faire vivre une communauté internationale riche et diverse.</span></p>
       <div class="figures">
-        <div><b>870+</b><span data-i18n="mission-stat1">Alliances dans le monde</span></div>
-        <div><b>135</b><span data-i18n="mission-stat2">Pays représentés</span></div>
+        <div><b>870+</b><span><span data-i18n="mission-stat1" style="display:contents">Alliances dans le monde</span></span></div>
+        <div><b>135</b><span><span data-i18n="mission-stat2" style="display:contents">Pays représentés</span></span></div>
       </div>
-      <a href="pages/qui-sommes-nous.html" class="btn btn-ghost" style="margin-top:26px;" data-i18n="mission-btn">En apprendre plus sur nous →</a>
+      <a href="pages/qui-sommes-nous.html" class="btn btn-ghost on-dark" style="margin-top:26px;"><span data-i18n="mission-btn" style="display:contents">En apprendre plus sur nous →</span></a>
     </div>
-    <div class="mission-photo">
-      <img src="pages/img/friends-group.jpg" alt="Groupe d'ami·es souriant ensemble, symbole de la communauté internationale de l'Alliance Française">
+    <div class="mission-art">
+      <img src="assets/img/afge-community.jpg" alt="Groupe international d’apprenants partageant un moment convivial" width="2560" height="1440" loading="lazy">
     </div>
   </div>
 </section>
-
-<section class="leveltest" id="niveau">
-  <div class="wrap">
+<section class="section" id="niveau">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;">
     <div>
-      <span class="eyebrow" data-i18n="leveltest-eyebrow">Test de placement</span>
-      <h2 data-i18n="leveltest-h2">Mesurez votre niveau avec notre test de placement gratuit.</h2>
-      <p data-i18n="leveltest-p">Vous souhaitez rejoindre l'un de nos cours mais vous hésitez sur le choix du niveau ? Pour vous orienter vers le parcours le mieux adapté à vos objectifs, nous vous invitons à réaliser notre test de placement en ligne gratuit.</p>
-      <a href="#" class="btn btn-primary" data-i18n="leveltest-btn">Passez le test →</a>
+      <span class="eyebrow"><span data-i18n="leveltest-eyebrow" style="display:contents">Test de placement</span></span>
+      <h2><span data-i18n="leveltest-h2" style="display:contents">Mesurez votre niveau avec notre test de placement gratuit.</span></h2>
+      <p><span data-i18n="leveltest-p" style="display:contents">Vous souhaitez rejoindre l'un de nos cours mais vous hésitez sur le choix du niveau ? Pour vous orienter vers le parcours le mieux adapté à vos objectifs, nous vous invitons à réaliser notre test de placement en ligne gratuit.</span></p>
+      <a href="mailto:pedagogie@afge.ch?subject=Demande de test de niveau" class="btn btn-primary"><span data-i18n="leveltest-btn" style="display:contents">Demander le test →</span></a>
     </div>
     <div class="path-mini">
       <span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span>
     </div>
   </div>
 </section>
-
-<section class="event" id="evenements">
-  <div class="wrap">
-    <div class="event-img">
-      <img src="pages/img/budapest-city.jpg" alt="Vue urbaine évoquant les échanges internationaux et culturels de l'Alliance Française">
-      <span class="tag" data-i18n="event-tag">Évènement à venir</span>
+<section class="section tinted" id="evenements">
+  <div class="wrap" style="display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;align-items:center;">
+    <div class="event-poster">
+      <img src="assets/img/ateliers-decriture.webp" alt="Ateliers d’écriture avec Agnès Abécassis" width="210" height="263" loading="lazy">
     </div>
     <div>
-      <span class="eyebrow" data-i18n="event-eyebrow">Ateliers d'écriture</span>
-      <h2 data-i18n="event-h2">Six ateliers avec Agnès Abécassis, autrice vendue à plusieurs millions d'exemplaires !</h2>
-      <p data-i18n="event-p">L'Alliance Française de Genève est heureuse de vous proposer un cycle de 6 ateliers d'écriture animés par Agnès Abécassis, autrice à succès aux millions de lecteurs. Pensés pour continuer son apprentissage du français dans un cadre ludique et créatif, ces ateliers vous permettront de laisser libre cours à votre créativité.</p>
-      <div class="meta">
-        <div><b data-i18n="event-meta1b">7 sept – 12 oct</b><span data-i18n="event-meta1s">Cycle 1, lundis</span></div>
-        <div><b data-i18n="event-meta2b">9 sept – 14 oct</b><span data-i18n="event-meta2s">Cycle 2, mercredis</span></div>
-        <div><b data-i18n="event-meta3b">Distanciel</b><span data-i18n="event-meta3s">Places limitées</span></div>
+      <span class="eyebrow"><span data-i18n="event-eyebrow" style="display:contents">Ateliers d'écriture</span></span>
+      <h2 style="margin:14px 0 16px;"><span data-i18n="event-h2" style="display:contents">Six ateliers avec Agnès Abécassis, autrice vendue à plusieurs millions d'exemplaires !</span></h2>
+      <p style="color:var(--ink-soft);margin-bottom:14px;"><span data-i18n="event-p" style="display:contents">L'Alliance Française de Genève est heureuse de vous proposer un cycle de 6 ateliers d'écriture animés par Agnès Abécassis, autrice à succès aux millions de lecteurs. Pensés pour continuer son apprentissage du français dans un cadre ludique et créatif, ces ateliers vous permettront de laisser libre cours à votre créativité.</span></p>
+      <div style="display:flex;gap:22px;margin:22px 0;flex-wrap:wrap;">
+        <div style="font-size:13.5px;"><b style="display:block;color:var(--indigo);font-family:'Fraunces',serif;font-size:15px;"><span data-i18n="event-meta1b" style="display:contents">7 sept – 12 oct</span></b><span style="color:var(--ink-faint);"><span data-i18n="event-meta1s" style="display:contents">Cycle 1, lundis</span></span></div>
+        <div style="font-size:13.5px;"><b style="display:block;color:var(--indigo);font-family:'Fraunces',serif;font-size:15px;"><span data-i18n="event-meta2b" style="display:contents">9 sept – 14 oct</span></b><span style="color:var(--ink-faint);"><span data-i18n="event-meta2s" style="display:contents">Cycle 2, mercredis</span></span></div>
+        <div style="font-size:13.5px;"><b style="display:block;color:var(--indigo);font-family:'Fraunces',serif;font-size:15px;"><span data-i18n="event-meta3b" style="display:contents">Distanciel</span></b><span style="color:var(--ink-faint);"><span data-i18n="event-meta3s" style="display:contents">Places limitées</span></span></div>
       </div>
-      <a href="#" class="btn btn-primary" data-i18n="event-btn">Réserver ma place →</a>
+      <a href="mailto:info@afge.ch?subject=Réservation - Ateliers d'écriture" class="btn btn-primary"><span data-i18n="event-btn" style="display:contents">Réserver ma place →</span></a>
     </div>
   </div>
 </section>
-
-<section class="faq" id="faq">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow" data-i18n="faq-eyebrow">Questions fréquentes</span>
-      <h2 data-i18n="faq-h2">FAQ</h2>
+<section class="section" id="faq">
+  <div class="wrap-narrow" style="max-width:820px;">
+    <div class="section-head">
+      <span class="eyebrow"><span data-i18n="faq-eyebrow" style="display:contents">Questions fréquentes</span></span>
+      <h2><span data-i18n="faq-h2" style="display:contents">FAQ</span></h2>
     </div>
+    
     <details class="faq-item" open>
-      <summary><h3 style="display:inline;font-family:inherit;font-weight:inherit;font-size:inherit;" data-i18n="faq-q1">Comment savoir quel cours de français correspond à mon niveau ?</h3><span class="plus">+</span></summary>
-      <div class="a" data-i18n="faq-a1">À l'Alliance Française de Genève, nous accompagnons chaque futur·e apprenant·e afin de l'orienter vers le groupe le plus adapté à ses compétences actuelles et à ses objectifs personnels. Pour cela, nous mettons à votre disposition un test de placement réalisable gratuitement sur notre site internet.</div>
+      <summary><span><span data-i18n="faq0q" style="display:contents">Comment savoir quel cours de français correspond à mon niveau ?</span></span><span class="plus">+</span></summary>
+      <div class="a"><span data-i18n="faq0a" style="display:contents">Un test de placement gratuit évalue votre compréhension écrite, grammaire et vocabulaire pour vous orienter vers le niveau A1 à C2 adapté.</span></div>
     </details>
     <details class="faq-item">
-      <summary><h3 style="display:inline;font-family:inherit;font-weight:inherit;font-size:inherit;" data-i18n="faq-q2">Est-il possible de suivre les cours de français à distance (en ligne) ?</h3><span class="plus">+</span></summary>
-      <div class="a" data-i18n="faq-a2">Actuellement, l'Alliance Française de Genève propose ses enseignements prioritairement en distanciel. La mise en place de cours en présentiel est désormais envisageable sous certaines conditions spécifiques — contactez-nous pour en discuter.</div>
+      <summary><span><span data-i18n="faq1q" style="display:contents">Est-il possible de suivre les cours de français à distance ?</span></span><span class="plus">+</span></summary>
+      <div class="a"><span data-i18n="faq1a" style="display:contents">Oui, nos cours sont proposés prioritairement en distanciel, avec des outils numériques interactifs. Le présentiel est envisageable sous certaines conditions.</span></div>
     </details>
     <details class="faq-item">
-      <summary><h3 style="display:inline;font-family:inherit;font-weight:inherit;font-size:inherit;" data-i18n="faq-q3">Quels sont les formats de cours proposés et à qui s'adressent-ils ?</h3><span class="plus">+</span></summary>
-      <div class="a" data-i18n="faq-a3">L'Alliance Française de Genève s'adresse à tous les publics : enfants comme adultes (dès 15 ans), en cours de groupe ou individuel. Nous accompagnons également les entreprises et proposons des ateliers thématiques ainsi que des séjours linguistiques.</div>
+      <summary><span><span data-i18n="faq2q" style="display:contents">Quels sont les formats de cours proposés et à qui s'adressent-ils ?</span></span><span class="plus">+</span></summary>
+      <div class="a"><span data-i18n="faq2a" style="display:contents">L'Alliance Française de Genève accompagne enfants et adultes (dès 15 ans) dans des cours de groupe ou individuels, ainsi que les entreprises et des ateliers thématiques.</span></div>
     </details>
     <details class="faq-item">
-      <summary><h3 style="display:inline;font-family:inherit;font-weight:inherit;font-size:inherit;" data-i18n="faq-q4">Proposez-vous des examens officiels comme le DELF ou le DALF ?</h3><span class="plus">+</span></summary>
-      <div class="a" data-i18n="faq-a4">Pour le moment, l'Alliance Française de Genève n'est pas encore un centre d'examen officiel pour la passation du DELF, du DALF, du TEF ou du TCF. Nous proposons cependant des cours et modules de préparation spécifiques à ces certifications.</div>
+      <summary><span><span data-i18n="faq3q" style="display:contents">Proposez-vous des examens officiels comme le DELF ou le DALF ?</span></span><span class="plus">+</span></summary>
+      <div class="a"><span data-i18n="faq3a" style="display:contents">L'Alliance Française de Genève n'est pas encore centre d'examen officiel, mais propose des cours et modules de préparation spécifiques à ces certifications.</span></div>
     </details>
     <details class="faq-item">
-      <summary><h3 style="display:inline;font-family:inherit;font-weight:inherit;font-size:inherit;" data-i18n="faq-q5">Quels sont les avantages à devenir membre ?</h3><span class="plus">+</span></summary>
-      <div class="a" data-i18n="faq-a5">Tarifs préférentiels sur les événements et chez nos partenaires, accès prioritaire aux activités culturelles, et accès à Culturethèque, la bibliothèque numérique des Alliances Françaises.</div>
+      <summary><span><span data-i18n="faq4q" style="display:contents">Quels sont les avantages à devenir membre de l'Alliance Française de Genève ?</span></span><span class="plus">+</span></summary>
+      <div class="a"><span data-i18n="faq4a" style="display:contents">Tarifs préférentiels sur les événements et chez nos partenaires, accès prioritaire aux activités culturelles, et accès à Culturethèque, la bibliothèque numérique des Alliances Françaises.</span></div>
     </details>
     <details class="faq-item">
-      <summary><h3 style="display:inline;font-family:inherit;font-weight:inherit;font-size:inherit;" data-i18n="faq-q6">Comment adhérer à l'Alliance Française de Genève ?</h3><span class="plus">+</span></summary>
-      <div class="a" data-i18n="faq-a6">L'adhésion annuelle se fait entièrement en ligne, en quelques minutes seulement. Il vous suffit de créer votre compte personnel sur notre plateforme sécurisée, puis de valider votre inscription en réglant votre cotisation annuelle par paiement électronique.</div>
+      <summary><span><span data-i18n="faq5q" style="display:contents">Comment adhérer à l'Alliance Française de Genève ?</span></span><span class="plus">+</span></summary>
+      <div class="a"><span data-i18n="faq5a" style="display:contents">L'adhésion annuelle se fait entièrement en ligne, en quelques minutes, en créant un compte personnel puis en réglant la cotisation par paiement électronique.</span></div>
     </details>
   </div>
 </section>
-
-<section class="contact-teaser" id="contact">
-  <div class="wrap">
-    <h2 data-i18n="contact-h2">Besoin de nous contacter ?</h2>
-    <p data-i18n="contact-p">Que vous souhaitiez apprendre le français, participer à nos événements culturels ou simplement obtenir un renseignement, l'équipe de l'Alliance Française de Genève vous accompagne.</p>
-    <a href="mailto:info@afge.ch" class="btn btn-primary" data-i18n="contact-btn">Contactez-nous →</a>
-  </div>
-</section>
-
 <section class="partners" id="partenaires">
+  <div class="wrap"><p class="label"><span data-i18n="partners-label" style="display:contents">Nos partenaires</span></p></div>
+  <div class="marquee"><div class="marquee-track">
+    <span>Gouvernement Français</span><span>ONU Genève</span><span>Fondation des Alliances Françaises</span><span>FIFDH</span><span>Institut Florimont</span><span>CCI Paris Île-de-France</span><span>Cinéma Bio</span><span>Collège du Léman</span><span>ESN Genève</span>
+    <span>Gouvernement Français</span><span>ONU Genève</span><span>Fondation des Alliances Françaises</span><span>FIFDH</span><span>Institut Florimont</span><span>CCI Paris Île-de-France</span><span>Cinéma Bio</span><span>Collège du Léman</span><span>ESN Genève</span>
+  </div></div>
+</section>
+<section class="section tinted" id="contact">
   <div class="wrap">
-    <p class="label" data-i18n="partners-label">Nos partenaires</p>
-  </div>
-  <div class="marquee">
-    <div class="marquee-track">
-      <span>Gouvernement Français</span><span>ONU Genève</span><span>Fondation des Alliances Françaises</span><span>FIFDH</span><span>Institut Florimont</span><span>CCI Paris Île-de-France</span><span>Cinéma Bio</span><span>Collège du Léman</span><span>ESN Genève</span>
-      <span>Gouvernement Français</span><span>ONU Genève</span><span>Fondation des Alliances Françaises</span><span>FIFDH</span><span>Institut Florimont</span><span>CCI Paris Île-de-France</span><span>Cinéma Bio</span><span>Collège du Léman</span><span>ESN Genève</span>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow"><span data-i18n="contact-eyebrow" style="display:contents">Besoin de nous contacter ?</span></span>
+        <h2><span data-i18n="contact-h2" style="display:contents">Parlons de votre projet.</span></h2>
+        <p><span data-i18n="contact-body" style="display:contents">Que vous souhaitiez apprendre le français, participer à nos événements culturels ou simplement obtenir un renseignement, l'équipe de l'Alliance Française de Genève vous accompagne.</span></p>
+        <a class="contact-line" href="mailto:info@afge.ch"><span class="ic">✉️</span> info@afge.ch</a>
+        <a class="contact-line" href="tel:+41786092980"><span class="ic">📞</span> +41 78 609 29 80</a>
+      </div>
+      <form class="contact-form" action="mailto:info@afge.ch" method="post" enctype="text/plain">
+        <h3><span data-i18n="form-title" style="display:contents">Nous écrire</span></h3>
+        <div class="row-2">
+          <div class="field"><label><span data-i18n="form-nom" style="display:contents">Nom</span></label><input type="text" name="nom" required data-i18n-ph="form-nom-ph" placeholder="Votre nom"></div>
+          <div class="field"><label><span data-i18n="form-email" style="display:contents">E-mail</span></label><input type="email" name="email" required data-i18n-ph="form-email-ph" placeholder="votre@email.com"></div>
+        </div>
+        <div class="field">
+          <label><span data-i18n="form-sujet" style="display:contents">Sujet</span></label>
+          <select name="sujet">
+            <option data-i18n="form-sujet-o0">Cours de français</option>
+            <option data-i18n="form-sujet-o1">Séjours linguistiques</option>
+            <option data-i18n="form-sujet-o2">Devenir membre / Faire un don</option>
+            <option data-i18n="form-sujet-o3">Autre</option>
+          </select>
+        </div>
+        <div class="field"><label><span data-i18n="form-message" style="display:contents">Message</span></label><textarea name="message" required data-i18n-ph="form-message-ph" placeholder="Comment pouvons-nous vous aider ?"></textarea></div>
+        <button type="submit" class="btn btn-primary btn-block"><span data-i18n="form-submit" style="display:contents">Envoyer →</span></button>
+      </form>
     </div>
   </div>
 </section>
-
 <section class="footer-cta" id="adherer">
   <div class="wrap">
-    <h2 data-i18n="footercta-h2">Devenez membre de l'Alliance Française de Genève</h2>
-    <p data-i18n="footercta-p">En devenant membre, vous soutenez directement nos projets pédagogiques et culturels tout en profitant d'avantages exclusifs.</p>
-    <a href="#" class="btn btn-primary" data-i18n="footercta-btn">Rejoignez-nous →</a>
+    <h2><span data-i18n="footercta-h2" style="display:contents">Devenez membre de l'Alliance Française de Genève</span></h2>
+    <p><span data-i18n="footercta-p" style="display:contents">En devenant membre, vous soutenez directement nos projets pédagogiques et culturels tout en profitant d'avantages exclusifs.</span></p>
+    <a href="mailto:info@afge.ch?subject=Demande d'adhésion" class="btn btn-primary"><span data-i18n="footercta-btn" style="display:contents">Rejoignez-nous →</span></a>
   </div>
 </section>
-
-<footer>
+<footer class="site-footer">
   <div class="wrap">
     <div class="fgrid">
       <div class="foot-brand">
-        <div class="brand-name" style="color:#F2F2F0;">Alliance Française<span style="color:#8A8A88;">de Genève</span></div>
+        <div class="brand" style="margin-bottom:10px;">
+          <img class="brand-logo brand-logo-footer" src="assets/img/brand/afge-stacked-white.png" alt="Alliance Française Genève – Suisse">
+        </div>
         <p data-i18n="footer-tagline">Association culturelle à but non lucratif — cours de français et vie culturelle francophone au cœur de Genève.</p>
       </div>
       <div>
         <h4 data-i18n="footer-h4-1">Apprendre</h4>
         <ul>
           <li><a href="pages/cours.html" data-i18n="footer-l1">Nos cours de français</a></li>
-          <li><a href="#niveau" data-i18n="footer-l2">Test de placement</a></li>
-          <li><a href="#" data-i18n="footer-l3">Préparation aux examens</a></li>
-          <li><a href="#" data-i18n="footer-l4">Séjours linguistiques</a></li>
+          <li><a href="index.html#niveau" data-i18n="footer-l2">Test de placement</a></li>
+          <li><a href="pages/cours.html#examens" data-i18n="footer-l3">Préparation aux examens</a></li>
+          <li><a href="pages/sejours-linguistiques.html" data-i18n="footer-l4">Séjours linguistiques</a></li>
         </ul>
       </div>
       <div>
         <h4 data-i18n="footer-h4-2">Participer</h4>
         <ul>
-          <li><a href="#evenements" data-i18n="footer-l5">Nos événements</a></li>
-          <li><a href="#" data-i18n="footer-l6">Actualités</a></li>
-          <li><a href="#adherer" data-i18n="footer-l7">Devenir membre</a></li>
-          <li><a href="#" data-i18n="footer-l8">Faire un don</a></li>
+          <li><a href="index.html#evenements" data-i18n="footer-l5">Nos événements</a></li>
+          <li><a href="index.html#adherer" data-i18n="footer-l7">Devenir membre</a></li>
+          <li><a href="mailto:info@afge.ch?subject=Don" data-i18n="footer-l8">Faire un don</a></li>
+          <li><a href="index.html#partenaires" data-i18n="footer-l10">Nos partenaires</a></li>
         </ul>
       </div>
       <div>
         <h4 data-i18n="footer-h4-3">Association</h4>
         <ul>
-          <li><a href="#qui-sommes-nous" data-i18n="footer-l9">Qui sommes-nous</a></li>
-          <li><a href="#" data-i18n="footer-l10">Nos partenaires</a></li>
-          <li><a href="#contact" data-i18n="footer-l11">Nous contacter</a></li>
-          <li><a href="#faq" data-i18n="footer-l12">FAQ</a></li>
+          <li><a href="pages/qui-sommes-nous.html" data-i18n="footer-l9">Qui sommes-nous</a></li>
+          <li><a href="index.html#contact" data-i18n="footer-l11">Nous contacter</a></li>
+          <li><a href="index.html#faq" data-i18n="footer-l12">FAQ</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
       <span data-i18n="footer-copy">© 2026 Alliance Française de Genève</span>
-      <span>+41 78 609 29 80 · Instagram · Facebook · LinkedIn</span>
+      <span>+41 78 609 29 80 · <a href="https://www.instagram.com/alliance_francaise.geneve/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/alliancefrancaisegeneve/" target="_blank" rel="noopener">Facebook</a> · <a href="https://ch.linkedin.com/company/alliance-fran%C3%A7aise-gen%C3%A8ve" target="_blank" rel="noopener">LinkedIn</a></span>
     </div>
   </div>
 </footer>
-
-<script>
-(function(){
-  var translations = {
-    "nav-accueil": {ja:"ホーム"},
-    "nav-cours": {ja:"フランス語コース"},
-    "dd-adultes": {ja:"個人レッスン（大人）"},
-    "dd-adultes-sub": {ja:"個人、A1〜C1"},
-    "dd-enfants": {ja:"個人レッスン（子供）"},
-    "dd-enfants-sub": {ja:"個人、A1〜C1"},
-    "dd-essentials": {ja:"夜間コース：French Essentials"},
-    "dd-essentials-sub": {ja:"グループ、A1・A2"},
-    "dd-action": {ja:"夜間コース：French in Action"},
-    "dd-action-sub": {ja:"グループ、B1・B2"},
-    "dd-intensifs": {ja:"集中コース"},
-    "dd-intensifs-sub": {ja:"グループ、午前"},
-    "dd-ateliers": {ja:"テーマ別ワークショップ"},
-    "dd-ateliers-sub": {ja:"グループ、全レベル"},
-    "dd-entreprise": {ja:"企業向けコース"},
-    "dd-entreprise-sub": {ja:"企業向け、A1〜C1"},
-    "dd-viewall-top": {ja:"コース概要"},
-    "dd-heading-cours": {ja:"コース"},
-    "nav-niveau": {ja:"レベル判定テスト"},
-    "niveau-sub": {ja:"無料・オンライン"},
-    "nav-evenements": {ja:"イベント"},
-    "nav-qui": {ja:"私たちについて"},
-    "nav-qui-menu": {ja:"私たちについて"},
-    "nav-partenaires": {ja:"パートナー"},
-    "nav-contact": {ja:"お問い合わせ"},
-    "nav-don": {ja:"寄付する"},
-    "nav-faq": {ja:"よくある質問"},
-    "nav-adherer": {ja:"入会する"},
-    "topbar-contact": {ja:"お問い合わせ"},
-    "hero-eyebrow": {ja:"870団体・135カ国"},
-    "hero-h1": {ja:"フランス語を学び、<em>つながりを築く。</em>"},
-    "hero-lede": {ja:"ジュネーブ・アリアンス・フランセーズにとって、フランス語の習得は単なる語学力ではありません。就労、権利、医療、教育、市民参加への扉を開く鍵です。"},
-    "hero-btn1": {ja:"コースを見る →"},
-    "hero-btn2": {ja:"レベルテストを受ける"},
-    "hero-stat1": {ja:"世界の拠点数"},
-    "hero-stat2": {ja:"全CEFRレベル対応"},
-    "intro-p1": {ja:"誰もが参加できるコミュニティに加わり、情熱あふれる専門講師陣とともに日常の中でフランス語を体験しましょう。"},
-    "intro-p2": {ja:"ジュネーブ・アリアンス・フランセーズは、ジュネーブに来た方々がフランス語を学ぶだけでなく、この街の文化的・市民的な生活の中に自分の居場所を見つけられることを願っています。そのために、CEFRの全レベルに対応したコースと、レベルに応じた文化的イベントを通じて、言語・社会・文化の統合プログラムを作りました。"},
-    "events-h2": {ja:"イベント"},
-    "events-p": {ja:"年間を通じたワークショップ、交流会、文化的な催し。"},
-    "events-btn": {ja:"詳しく見る →"},
-    "mission-eyebrow": {ja:"ジュネーブ・アリアンス・フランセーズについて"},
-    "mission-h2": {ja:"ジュネーブに根ざした、<em>世界的な</em>ネットワークの一員。"},
-    "mission-p": {ja:"ジュネーブのアリアンス・フランセーズは、135カ国以上、870以上の拠点をつなぐ国際的なネットワークの一員です。何千人もの教師とスタッフが共有する使命は、フランス語を伝え、フランス語圏の文化を分かち合い、豊かで多様な国際コミュニティを育てることです。"},
-    "mission-stat1": {ja:"世界の拠点数"},
-    "mission-stat2": {ja:"対象国数"},
-    "mission-btn": {ja:"私たちについてもっと知る →"},
-    "leveltest-eyebrow": {ja:"レベル判定テスト"},
-    "leveltest-h2": {ja:"無料のレベル判定テストで、あなたのフランス語力を確認しましょう。"},
-    "leveltest-p": {ja:"コースへの参加をお考えだけれど、どのレベルが合っているか迷っていませんか？目標に最も適したコースをご案内するため、無料のオンラインレベル判定テストをぜひご利用ください。"},
-    "leveltest-btn": {ja:"テストを受ける →"},
-    "event-tag": {ja:"開催予定のイベント"},
-    "event-eyebrow": {ja:"執筆ワークショップ"},
-    "event-h2": {ja:"累計発行部数数百万部の作家、アニェス・アベカシスによる全6回のワークショップ！"},
-    "event-p": {ja:"ジュネーブ・アリアンス・フランセーズは、数百万人の読者を持つベストセラー作家アニェス・アベカシスによる、全6回の執筆ワークショップを開催します。遊び心と創造性にあふれた環境でフランス語学習を続けられるよう設計されており、自由に創造力を発揮していただけます。"},
-    "event-meta1b": {ja:"9月7日〜10月12日"},
-    "event-meta1s": {ja:"第1期・月曜日"},
-    "event-meta2b": {ja:"9月9日〜10月14日"},
-    "event-meta2s": {ja:"第2期・水曜日"},
-    "event-meta3b": {ja:"オンライン"},
-    "event-meta3s": {ja:"定員あり"},
-    "event-btn": {ja:"参加を予約する →"},
-    "faq-eyebrow": {ja:"よくある質問"},
-    "faq-h2": {ja:"FAQ"},
-    "faq-q1": {ja:"自分のレベルに合ったコースはどうやって分かりますか？"},
-    "faq-a1": {ja:"ジュネーブ・アリアンス・フランセーズでは、それぞれの学習者を現在の実力と目標に最も適したグループへご案内しています。そのために、無料のレベル判定テストをウェブサイト上でご用意しています。"},
-    "faq-q2": {ja:"フランス語コースはオンラインで受講できますか？"},
-    "faq-a2": {ja:"現在、ジュネーブ・アリアンス・フランセーズは主にオンラインで授業を提供しています。特定の条件下では対面授業も可能ですので、詳しくはお問い合わせください。"},
-    "faq-q3": {ja:"どのようなコース形式があり、誰向けですか？"},
-    "faq-a3": {ja:"ジュネーブ・アリアンス・フランセーズは、子供から大人（15歳以上）まで、グループレッスンでも個人レッスンでも、あらゆる方を対象としています。企業向けサポートやテーマ別ワークショップ、語学留学プログラムもご用意しています。"},
-    "faq-q4": {ja:"DELFやDALFなどの公式試験は実施していますか？"},
-    "faq-a4": {ja:"現時点では、ジュネーブ・アリアンス・フランセーズはDELF・DALF・TEF・TCFの公式試験センターではありません。ただし、これらの資格試験に特化した対策コース・講座をご提供しています。"},
-    "faq-q5": {ja:"会員になるとどんな特典がありますか？"},
-    "faq-a5": {ja:"イベントや提携先での優待価格、文化活動への優先アクセス、そしてアリアンス・フランセーズのデジタル図書館「Culturethèque」の利用が可能です。"},
-    "faq-q6": {ja:"ジュネーブ・アリアンス・フランセーズへの入会方法は？"},
-    "faq-a6": {ja:"年会費のお申し込みはすべてオンラインで、数分で完了します。安全なプラットフォーム上で個人アカウントを作成し、年会費をオンライン決済でお支払いいただくだけです。"},
-    "contact-h2": {ja:"お問い合わせはこちら"},
-    "contact-p": {ja:"フランス語学習について、文化イベントへの参加について、あるいはちょっとした質問でも、ジュネーブ・アリアンス・フランセーズのチームがサポートいたします。"},
-    "contact-btn": {ja:"お問い合わせ →"},
-    "partners-label": {ja:"パートナー"},
-    "footercta-h2": {ja:"ジュネーブ・アリアンス・フランセーズの会員になる"},
-    "footercta-p": {ja:"会員になることで、教育・文化プロジェクトを直接サポートしながら、会員限定の特典をお楽しみいただけます。"},
-    "footercta-btn": {ja:"参加する →"},
-    "footer-tagline": {ja:"非営利文化団体 — ジュネーブの中心でフランス語コースとフランス語圏文化を提供。"},
-    "footer-h4-1": {ja:"学ぶ"},
-    "footer-l1": {ja:"フランス語コース"},
-    "footer-l2": {ja:"レベル判定テスト"},
-    "footer-l3": {ja:"試験対策"},
-    "footer-l4": {ja:"語学留学"},
-    "footer-h4-2": {ja:"参加する"},
-    "footer-l5": {ja:"イベント"},
-    "footer-l6": {ja:"ニュース"},
-    "footer-l7": {ja:"入会する"},
-    "footer-l8": {ja:"寄付する"},
-    "footer-h4-3": {ja:"協会について"},
-    "footer-l9": {ja:"私たちについて"},
-    "footer-l10": {ja:"パートナー"},
-    "footer-l11": {ja:"お問い合わせ"},
-    "footer-l12": {ja:"よくある質問"},
-    "footer-copy": {ja:"© 2026 ジュネーブ・アリアンス・フランセーズ"}
-  };
-
-  var originals = {};
-  document.querySelectorAll('[data-i18n]').forEach(function(el){
-    originals[el] = null;
-  });
-
-  function setLang(lang){
-    document.querySelectorAll('[data-i18n]').forEach(function(el){
-      var key = el.getAttribute('data-i18n');
-      if (!el.hasAttribute('data-fr-original')) {
-        el.setAttribute('data-fr-original', el.innerHTML);
-      }
-      if (lang === 'ja' && translations[key] && translations[key].ja) {
-        el.innerHTML = translations[key].ja;
-      } else {
-        el.innerHTML = el.getAttribute('data-fr-original');
-      }
-    });
-    document.documentElement.setAttribute('lang', lang === 'ja' ? 'ja' : 'fr');
-    document.querySelectorAll('.lang-switch a[data-lang]').forEach(function(a){
-      a.classList.toggle('lang-active', a.getAttribute('data-lang') === lang);
-    });
-    try { localStorage.setItem('afge-lang', lang); } catch(e){}
-  }
-
-  document.querySelectorAll('.lang-switch a[data-lang]').forEach(function(a){
-    a.addEventListener('click', function(e){
-      e.preventDefault();
-      setLang(a.getAttribute('data-lang'));
-    });
-  });
-
-  var saved = null;
-  try { saved = localStorage.getItem('afge-lang'); } catch(e){}
-  if (saved === 'ja') setLang('ja');
-})();
-</script>
-
+<script>window.AFGE_I18N = {"topbar-contact":{"ja":"お問い合わせ"},"nav-cours":{"ja":"フランス語コース"},"nav-niveau":{"ja":"レベル判定テスト"},"nav-niveau-sub":{"ja":"無料・オンライン — A1〜C2のレベルが分かります"},"dd-heading-cours":{"ja":"コース"},"dd-adultes":{"ja":"個人レッスン（大人）"},"dd-adultes-sub":{"ja":"個人、A1〜C1"},"dd-enfants":{"ja":"個人レッスン（子供）"},"dd-enfants-sub":{"ja":"個人、A1〜C1"},"dd-essentials":{"ja":"夜間コース：French Essentials"},"dd-essentials-sub":{"ja":"グループ、A1・A2"},"dd-action":{"ja":"夜間コース：French in Action"},"dd-action-sub":{"ja":"グループ、B1・B2"},"dd-intensifs":{"ja":"集中コース"},"dd-intensifs-sub":{"ja":"グループ、午前"},"dd-ateliers":{"ja":"テーマ別ワークショップ"},"dd-ateliers-sub":{"ja":"グループ、全レベル"},"dd-entreprise":{"ja":"企業向けコース"},"dd-entreprise-sub":{"ja":"法人、A1〜C1"},"nav-cours-overview":{"ja":"すべてのコースを見る"},"nav-cours-overview-sub":{"ja":"形式・レベル・料金を比較 →"},"nav-sejours":{"ja":"語学留学"},"nav-evenements":{"ja":"イベント"},"nav-alliance":{"ja":"アリアンスについて"},"nav-qui":{"ja":"私たちについて"},"nav-partenaires":{"ja":"パートナー"},"nav-faq":{"ja":"よくある質問"},"nav-contact":{"ja":"お問い合わせ"},"nav-don":{"ja":"寄付する"},"nav-adherer":{"ja":"入会する →"},"footer-tagline":{"ja":"非営利文化団体 — ジュネーブの中心でフランス語コースとフランス語圏文化を提供。"},"footer-h4-1":{"ja":"学ぶ"},"footer-l1":{"ja":"フランス語コース"},"footer-l2":{"ja":"レベル判定テスト"},"footer-l3":{"ja":"試験対策"},"footer-l4":{"ja":"語学留学"},"footer-h4-2":{"ja":"参加する"},"footer-l5":{"ja":"イベント"},"footer-l7":{"ja":"入会する"},"footer-l8":{"ja":"寄付する"},"footer-l10":{"ja":"パートナー"},"footer-h4-3":{"ja":"協会について"},"footer-l9":{"ja":"私たちについて"},"footer-l11":{"ja":"お問い合わせ"},"footer-l12":{"ja":"よくある質問"},"footer-copy":{"ja":"© 2026 ジュネーブ・アリアンス・フランセーズ"},"hero-eyebrow":{"ja":"870団体・135カ国"},"hero-h1":{"ja":"フランス語を学び、<em>つながりを築く。</em>"},"hero-lede":{"ja":"ジュネーブ・アリアンス・フランセーズにとって、フランス語の習得は単なる語学力ではありません。就労、権利、医療、教育、市民参加への扉を開く鍵です。"},"hero-btn1":{"ja":"コースを見る →"},"hero-btn2":{"ja":"レベルテストを受ける"},"hero-stat1":{"ja":"世界の拠点数"},"hero-stat2":{"ja":"全CEFRレベル対応"},"hero-badge3":{"ja":"🇨🇭 ジュネーブ、スイス"},"intro-p1":{"ja":"誰もが参加できるコミュニティに加わり、情熱あふれる専門講師陣とともに日常の中でフランス語を体験しましょう。"},"intro-p2":{"ja":"ジュネーブ・アリアンス・フランセーズは、この街にやってきた方々がフランス語を学ぶだけでなく、文化的・市民的な生活の中に自分の居場所を見つけられることを願っています。そのために、CEFRの全レベルに対応したコースと、レベルに応じた教育的イベントを通じて、言語・社会・文化の統合プログラムを作りました。"},"courses-eyebrow":{"ja":"コース"},"courses-h2":{"ja":"目標に応じた、多彩なコース。"},"courses-body":{"ja":"個人・グループ・集中・法人向けまで。すべての形式と料金を比較できます。"},"fc0-tag":{"ja":"個人"},"fc0-title":{"ja":"個人レッスン（大人）"},"fc0-desc":{"ja":"自宅またはオンラインでの完全個人レッスン。仕事やプライベートの目標に合わせて。"},"fc-cta":{"ja":"詳しく見る →"},"fc1-tag":{"ja":"グループ"},"fc1-title":{"ja":"夜間コース：French Essentials"},"fc1-desc":{"ja":"週2回のオンラインレッスンで、フランス語の確かな基礎を。"},"fc2-tag":{"ja":"グループ"},"fc2-title":{"ja":"集中コース"},"fc2-desc":{"ja":"月〜金の午前中、集中的なイマージョンで一気に上達。"},"fc3-tag":{"ja":"法人"},"fc3-title":{"ja":"企業向けコース"},"fc3-desc":{"ja":"貴社チーム向けのオーダーメイドプログラム。対面またはオンライン。"},"courses-viewall":{"ja":"すべてのコースを見る →"},"events-h2":{"ja":"イベント"},"events-p":{"ja":"年間を通じたワークショップ、交流会、文化的な催し。"},"events-btn":{"ja":"詳しく見る →"},"mission-eyebrow":{"ja":"ジュネーブ・アリアンス・フランセーズについて"},"mission-h2":{"ja":"ジュネーブに根ざした、<em>世界的な</em>ネットワークの一員。"},"mission-p":{"ja":"ジュネーブのアリアンス・フランセーズは、135カ国以上、870以上の拠点をつなぐ国際的なネットワークの一員です。何千人もの教師とスタッフが共有する使命は、フランス語を伝え、フランス語圏の文化を分かち合い、豊かで多様な国際コミュニティを育てることです。"},"mission-stat1":{"ja":"世界の拠点数"},"mission-stat2":{"ja":"対象国数"},"mission-btn":{"ja":"私たちについてもっと知る →"},"leveltest-eyebrow":{"ja":"レベル判定テスト"},"leveltest-h2":{"ja":"無料のレベル判定テストで、あなたのフランス語力を確認しましょう。"},"leveltest-p":{"ja":"コースへの参加をお考えだけれど、どのレベルが合っているか迷っていませんか？目標に最も適したコースをご案内するため、無料のオンラインレベル判定テストをぜひご利用ください。"},"leveltest-btn":{"ja":"テストを申し込む →"},"event-tag":{"ja":"開催予定のイベント"},"event-eyebrow":{"ja":"執筆ワークショップ"},"event-h2":{"ja":"累計発行部数数百万部の作家、アニェス・アベカシスによる全6回のワークショップ！"},"event-p":{"ja":"ジュネーブ・アリアンス・フランセーズは、数百万人の読者を持つベストセラー作家アニェス・アベカシスによる、全6回の執筆ワークショップを開催します。遊び心と創造性にあふれた環境でフランス語学習を続けられるよう設計されており、自由に創造力を発揮していただけます。"},"event-meta1b":{"ja":"9月7日〜10月12日"},"event-meta1s":{"ja":"第1期・月曜日"},"event-meta2b":{"ja":"9月9日〜10月14日"},"event-meta2s":{"ja":"第2期・水曜日"},"event-meta3b":{"ja":"オンライン"},"event-meta3s":{"ja":"定員あり"},"event-btn":{"ja":"参加を予約する →"},"faq-eyebrow":{"ja":"よくある質問"},"faq-h2":{"ja":"FAQ"},"faq0q":{"ja":"自分のレベルに合ったコースはどうやって分かりますか？"},"faq0a":{"ja":"無料のレベル判定テストで、読解力・文法・語彙力を評価し、A1〜C2の中から最適なレベルへご案内します。"},"faq1q":{"ja":"フランス語コースはオンラインで受講できますか？"},"faq1a":{"ja":"はい、コースは主にオンラインで、インタラクティブなデジタルツールを使って提供されています。条件によっては対面での受講も可能です。"},"faq2q":{"ja":"どのようなコース形式があり、誰向けですか？"},"faq2a":{"ja":"ジュネーブ・アリアンス・フランセーズは、子ども・大人（15歳以上）を対象に、グループ・個人レッスンから法人向け研修、テーマ別ワークショップまで幅広く対応しています。"},"faq3q":{"ja":"DELFやDALFなどの公式試験は実施していますか？"},"faq3a":{"ja":"現時点では公式試験センターではありませんが、これらの資格に特化した対策コース・講座をご提供しています。"},"faq4q":{"ja":"会員になるとどんな特典がありますか？"},"faq4a":{"ja":"イベントや提携先での優待価格、文化活動への優先アクセス、そしてアリアンス・フランセーズのデジタル図書館「Culturethèque」をご利用いただけます。"},"faq5q":{"ja":"ジュネーブ・アリアンス・フランセーズへの入会方法は？"},"faq5a":{"ja":"年会費のお申し込みはすべてオンラインで、数分で完了します。個人アカウントを作成し、年会費をオンライン決済でお支払いいただくだけです。"},"contact-eyebrow":{"ja":"お問い合わせ"},"contact-h2":{"ja":"あなたのプロジェクトについて、お話ししましょう。"},"contact-body":{"ja":"フランス語を学びたい方も、文化イベントに参加したい方も、ちょっとした質問がある方も。ジュネーブ・アリアンス・フランセーズのチームがサポートいたします。"},"form-title":{"ja":"お問い合わせフォーム"},"form-nom":{"ja":"お名前"},"form-email":{"ja":"メールアドレス"},"form-sujet":{"ja":"件名"},"form-sujet-o0":{"ja":"フランス語コースについて"},"form-sujet-o1":{"ja":"語学留学について"},"form-sujet-o2":{"ja":"入会・寄付について"},"form-sujet-o3":{"ja":"その他"},"form-message":{"ja":"メッセージ"},"form-submit":{"ja":"送信する →"},"form-message-ph":{"ja":"どのようなご用件でしょうか？"},"form-nom-ph":{"ja":"お名前"},"form-email-ph":{"ja":"you@example.com"},"partners-label":{"ja":"パートナー"},"footercta-h2":{"ja":"ジュネーブ・アリアンス・フランセーズの会員になる"},"footercta-p":{"ja":"会員になることで、教育・文化プロジェクトを直接サポートしながら、会員限定の特典をお楽しみいただけます。"},"footercta-btn":{"ja":"参加する →"}};</script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

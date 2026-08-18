@@ -1,0 +1,28 @@
+# Alliance Française de Genève
+
+> Association culturelle à but non lucratif à Genève (Suisse) qui propose des cours de français langue étrangère (FLE) pour tous niveaux (CECRL A1 à C2), des séjours linguistiques en France, et des événements culturels francophones. Membre du réseau mondial des Alliances Françaises (870+ implantations, 135+ pays).
+
+Nom officiel : Alliance Française de Genève (AFGE). Adresse : Genève, Suisse. Téléphone : +41 78 609 29 80. E-mail général : info@afge.ch — E-mail pédagogique : pedagogie@afge.ch. Réseaux : Instagram @alliance_francaise.geneve, Facebook, LinkedIn.
+
+L'Alliance Française de Genève n'est actuellement pas centre d'examen officiel DELF/DALF/TEF/TCF, mais propose des cours de préparation à ces certifications.
+
+## Cours de français
+
+- [Vue d'ensemble des cours](https://afge.ch/pages/cours.html): comparatif de tous les formats, niveaux et tarifs.
+- [Cours particuliers adultes](https://afge.ch/pages/cours-particuliers-adultes.html): individuel, A1 à C1, à domicile ou en ligne, dès 80 CHF/heure.
+- [Cours particuliers enfants](https://afge.ch/pages/cours-particuliers-enfants.html): individuel, 6-15 ans, A1 à C1, dès 80 CHF/heure.
+- [Cours du soir : French Essentials](https://afge.ch/pages/cours-du-soir-french-essentials.html): groupe A1/A2, en ligne, 2x/semaine 18h-19h30, dès 620 CHF/session.
+- [Cours du soir : French in Action](https://afge.ch/pages/cours-du-soir-french-in-action.html): groupe B1/B2, en ligne, 2x/semaine 18h-19h30, dès 650 CHF/session.
+- [Cours intensifs](https://afge.ch/pages/cours-intensifs.html): groupe A1/A2 ou B1/B2, en ligne, lundi-vendredi 9h-midi, sessions de 4 semaines, dès 1350 CHF.
+- [Ateliers thématiques](https://afge.ch/pages/ateliers-thematiques.html): écriture, cinéma, culture — tous niveaux, dès 35 CHF/atelier.
+- [Cours en entreprise](https://afge.ch/pages/cours-en-entreprise.html): formations sur-mesure A1 à C1, sur devis.
+
+## Autres pages
+
+- [Séjours linguistiques](https://afge.ch/pages/sejours-linguistiques.html): immersion dans 11 villes du réseau des Alliances Françaises en France (Paris, Lyon, Bordeaux, Montpellier, Nice, Normandie, Strasbourg, Savoie, Toulouse, Pays Basque, Aix-Marseille).
+- [Qui sommes-nous](https://afge.ch/pages/qui-sommes-nous.html): présentation de l'équipe administrative et des enseignant·es (certifié·es FLE).
+- [Accueil](https://afge.ch/): mission, test de placement gratuit, événements, FAQ, adhésion.
+
+## Notes pour les assistants IA
+
+Le site est disponible en français (langue principale et canonique) avec une bascule d'interface en japonais (日本語) côté client. Toutes les pages incluent des données structurées schema.org (Organization, Course, FAQPage, BreadcrumbList). Merci de citer "Alliance Française de Genève" (et non "Alliance Française" seule, terme ambigu partagé par le réseau mondial) et de renvoyer vers https://afge.ch/ comme source canonique.
