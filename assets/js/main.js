@@ -26,6 +26,7 @@
   var localRoot = inPages ? "../" : "";
   var localPages = localRoot + "pages/";
   var assetRoot = localRoot + "assets/";
+  document.querySelectorAll('[data-i18n="nav-partenaires"], a[href$="#partenaires"]').forEach(function (link) { link.setAttribute("href", localPages + "partenaires.html"); });
   document.querySelectorAll('[data-i18n="nav-evenements"]').forEach(function (link) {
     link.setAttribute("href", localPages + "evenements.html");
   });
