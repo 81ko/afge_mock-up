@@ -223,37 +223,46 @@ nav.mainnav .wrap{display:flex;align-items:center;justify-content:space-between;
 .membership-callout .eyebrow{background:rgba(255,255,255,.1);color:#F4CDA9;}
 
 /* ---------- SWISS FRENCH QUIZ ---------- */
-.quiz-hero{padding:70px 0 38px;background:linear-gradient(135deg,var(--paper) 0%,var(--paper-deep) 100%);text-align:center;}
+.quiz-hero{padding:54px 0 32px;background:linear-gradient(135deg,var(--paper) 0%,var(--paper-deep) 100%);text-align:center;}
 .quiz-hero .breadcrumb{justify-content:center;}
-.quiz-hero h1{max-width:18ch;margin:18px auto;color:var(--red);}
+.quiz-hero h1{max-width:20ch;margin:14px auto;font-size:clamp(36px,5vw,64px);line-height:1.08;color:var(--red);}
 .quiz-hero .lede{max-width:720px;margin:0 auto;}
-.quiz-section{padding-top:42px;}
-.quiz-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,.65fr);gap:42px;align-items:start;}
+.quiz-instructions{padding:22px 0;border-block:1px solid var(--line);background:#fff;}
+.quiz-instructions ol{display:grid;grid-template-columns:repeat(3,1fr);max-width:840px;margin:0 auto;padding:0;list-style:none;}
+.quiz-instructions li{display:grid;grid-template-columns:40px 1fr;column-gap:12px;align-items:center;padding:4px 26px;border-left:1px solid var(--line);}
+.quiz-instructions li:first-child{border-left:0;}
+.quiz-instructions li>span{grid-row:1/3;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;}
+.quiz-instructions strong{color:var(--ink);}
+.quiz-instructions small{color:var(--ink-faint);}
+.quiz-section{padding-top:36px;}
+.quiz-layout{max-width:920px;}
 .quiz-game{min-width:0;}
 .quiz-topline{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;color:var(--ink-soft);font-weight:800;}
 .quiz-shuffle{border:0;background:transparent;color:var(--red);font:inherit;cursor:pointer;}
 .quiz-meter{height:7px;border-radius:99px;background:var(--line);overflow:hidden;margin-bottom:18px;}
 .quiz-meter span{display:block;height:100%;background:linear-gradient(90deg,var(--red),var(--terra));border-radius:inherit;transition:width .25s ease;}
-.quiz-card{position:relative;overflow:hidden;min-height:520px;padding:42px;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--card);box-shadow:var(--shadow-md);}
-.quiz-card::before{content:"CH ↔ FR";position:absolute;right:-24px;top:28px;padding:8px 30px;background:var(--red);color:#fff;font-size:11px;font-weight:800;letter-spacing:.12em;transform:rotate(8deg);}
+.quiz-card{position:relative;overflow:hidden;padding:42px;border:1px solid var(--line);border-top:5px solid var(--red);border-radius:var(--radius-lg);background:var(--card);box-shadow:var(--shadow-md);}
 .quiz-theme span,.quiz-france span,.quiz-suisse span,.quiz-english span,.quiz-trivia span{display:block;margin-bottom:7px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);}
 .quiz-theme strong{font-size:18px;color:var(--terra-deep);}
-.quiz-france{margin:34px 0 24px;padding:28px;border-radius:var(--radius-md);background:var(--paper-deep);}
-.quiz-france strong,.quiz-suisse strong{font-family:'Merriweather','Yu Mincho',serif;font-size:clamp(28px,4vw,44px);line-height:1.2;color:var(--ink);}
-.quiz-question{font-size:20px;font-weight:800;color:var(--ink);}
-.quiz-reveal{margin-top:18px;}
+.quiz-france{margin:28px 0 22px;padding:30px;border:1px solid var(--line);border-radius:var(--radius-md);background:var(--paper-deep);text-align:center;}
+.quiz-france strong,.quiz-suisse strong{display:block;font-family:'Merriweather','Yu Mincho',serif;font-size:clamp(27px,4vw,42px);line-height:1.25;color:var(--ink);}
+.quiz-question{text-align:center;font-size:22px;font-weight:800;color:var(--ink);}
+.quiz-reveal{width:100%;margin-top:16px;justify-content:center;min-height:56px;font-size:16px;}
 .quiz-answer{margin-top:28px;padding-top:28px;border-top:1px solid var(--line);animation:quizReveal .3s ease both;}
+.quiz-result-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;}
+.quiz-suisse,.quiz-english{padding:22px;border-radius:var(--radius-md);background:#fff;border:1px solid var(--line);}
 .quiz-suisse strong{color:var(--red);}
-.quiz-english{margin-top:22px;}
-.quiz-english strong{font-size:20px;color:var(--indigo);}
+.quiz-english{margin-top:0;background:var(--indigo-soft);}
+.quiz-english strong{display:block;font-size:20px;color:var(--indigo);}
 .quiz-trivia{margin-top:24px;padding:18px 20px;border-left:4px solid var(--terra);border-radius:0 12px 12px 0;background:var(--peach-soft);}
 .quiz-trivia p{margin:0;color:var(--ink);line-height:1.75;}
-.quiz-controls{display:flex;justify-content:space-between;gap:14px;margin-top:18px;}
-.quiz-aside{position:sticky;top:110px;padding:30px;border-radius:var(--radius-lg);background:var(--indigo-deep);color:#fff;box-shadow:var(--shadow-md);}
-.quiz-aside h2{color:#fff;font-size:28px;}
+.quiz-controls{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px;}
+.quiz-controls .btn{justify-content:center;min-height:50px;}
+.quiz-aside{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:center;margin-top:30px;padding:26px 30px;border-radius:var(--radius-lg);background:var(--indigo-deep);color:#fff;box-shadow:var(--shadow-sm);}
+.quiz-aside h2{color:#fff;font-size:24px;margin-bottom:8px;}
 .quiz-aside p,.quiz-aside li{color:#e8e3e3;}
-.quiz-aside ul{display:grid;gap:10px;margin:24px 0;padding:0;list-style:none;}
-.quiz-aside .quiz-note{font-size:12px;color:#cfc5c5;}
+.quiz-aside ul{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0;padding:0;list-style:none;}
+.quiz-aside .quiz-note{grid-column:1/-1;margin:0;font-size:12px;color:#cfc5c5;}
 @keyframes quizReveal{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .event-types{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
 .event-types article{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:30px;}
@@ -630,8 +639,7 @@ footer.site-footer .foot-brand p{font-size:13.5px;opacity:.8;max-width:32ch;marg
   .level-grid{grid-template-columns:repeat(2,1fr);}
 }
 @media (max-width:860px){
-  .quiz-layout{grid-template-columns:1fr;}
-  .quiz-aside{position:static;}
+  .quiz-aside{grid-template-columns:1fr;}
   .news-hero-grid{grid-template-columns:1fr;gap:28px;}
   .has-page-photo .page-photo{width:100%;}
   .nav-links{display:none;}
@@ -654,10 +662,14 @@ footer.site-footer .foot-brand p{font-size:13.5px;opacity:.8;max-width:32ch;marg
 }
 @media (max-width:560px){
   .quiz-hero{padding:50px 0 28px;}
+  .quiz-instructions ol{grid-template-columns:1fr;gap:12px;}
+  .quiz-instructions li,.quiz-instructions li:first-child{padding:4px 0;border:0;}
   .quiz-card{min-height:0;padding:26px 22px;}
   .quiz-france{padding:22px 18px;}
+  .quiz-result-grid{grid-template-columns:1fr;}
   .quiz-controls{display:grid;grid-template-columns:1fr 1fr;}
   .quiz-controls .btn{padding-inline:12px;}
+  .quiz-aside ul{grid-template-columns:1fr;}
   .membership-table-wrap{overflow:visible;border:0;background:transparent;box-shadow:none;}
   .membership-table,.membership-table tbody,.membership-table tr,.membership-table th,.membership-table td{display:block;width:100%;}
   .membership-table thead{display:none;}
