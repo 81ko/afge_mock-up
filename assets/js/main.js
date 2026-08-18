@@ -33,6 +33,9 @@
   document.querySelectorAll('[data-i18n="nav-adherer"]').forEach(function (link) {
     link.setAttribute("href", localPages + "adherer.html");
   });
+  document.querySelectorAll('[data-i18n="nav-don"], [data-i18n="footer-l8"], a[href^="mailto:info@afge.ch?subject=Don"]').forEach(function (link) {
+    link.setAttribute("href", localPages + "faire-un-don.html");
+  });
   document.querySelectorAll('[data-i18n="dd-entreprise"]').forEach(function (label) {
     var link = label.closest("a");
     if (!link || link.parentElement.querySelector(".nav-exam-prep-link")) return;
