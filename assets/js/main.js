@@ -33,6 +33,24 @@
   document.querySelectorAll('[data-i18n="nav-adherer"]').forEach(function (link) {
     link.setAttribute("href", localPages + "adherer.html");
   });
+  document.querySelectorAll('[data-i18n="dd-entreprise"]').forEach(function (label) {
+    var link = label.closest("a");
+    if (!link || link.parentElement.querySelector(".nav-exam-prep-link")) return;
+    var examLink = document.createElement("a");
+    examLink.className = "nav-exam-prep-link";
+    examLink.href = localPages + "preparation-aux-examens.html";
+    examLink.innerHTML = '<span>Préparation aux examens</span><small>DELF-DALF · TEF · TCF</small>';
+    link.insertAdjacentElement("afterend", examLink);
+  });
+  document.querySelectorAll('.mobile-panel [data-i18n="dd-entreprise"]').forEach(function (label) {
+    var link = label.closest("a");
+    if (!link || panel.querySelector(".mp-exam-prep")) return;
+    var examLink = document.createElement("a");
+    examLink.className = "mp-sub mp-exam-prep";
+    examLink.href = localPages + "preparation-aux-examens.html";
+    examLink.textContent = "Préparation aux examens";
+    link.insertAdjacentElement("afterend", examLink);
+  });
   document.querySelectorAll('a[href*="afge.ch/nos-actualites"]').forEach(function (link) {
     link.setAttribute("href", localPages + "actualites.html");
     link.removeAttribute("target");
