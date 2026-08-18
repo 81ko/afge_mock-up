@@ -273,6 +273,11 @@ nav.mainnav .wrap{display:flex;align-items:center;justify-content:space-between;
   width:46px;height:46px;border-radius:12px;background:var(--indigo-soft);color:var(--indigo);
   display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:16px;
 }
+.card .icon-premium{
+  width:54px;height:54px;border-radius:50%;background:linear-gradient(145deg,#fff,var(--paper-deep));
+  border:1px solid rgba(200,16,46,.22);box-shadow:0 8px 22px rgba(41,56,99,.1),inset 0 0 0 5px rgba(200,16,46,.035);
+}
+.card .icon-premium img{width:24px;height:24px;display:block;filter:invert(13%) sepia(92%) saturate(4661%) hue-rotate(344deg) brightness(84%) contrast(99%);}
 .card h3{font-size:17.5px;margin-bottom:8px;}
 .card p{color:var(--ink-soft);font-size:14.5px;}
 .card.highlight{background:var(--indigo);border-color:var(--indigo);}
