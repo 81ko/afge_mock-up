@@ -368,6 +368,16 @@ nav.mainnav .wrap{display:flex;align-items:center;justify-content:space-between;
 .course-table .ct-name{display:block;font-family:'Merriweather','Hiragino Mincho ProN','Yu Mincho',serif;font-style:italic;font-weight:600;font-size:16px;color:var(--terra-deep);margin-top:6px;}
 .course-table .ct-action{text-align:right;white-space:nowrap;}
 .course-table-scroll{overflow-x:auto;}
+.membership-table-wrap{overflow:hidden;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--card);box-shadow:var(--shadow-sm);}
+.membership-table{width:100%;border-collapse:collapse;}
+.membership-table thead th{padding:17px 18px;background:var(--indigo);color:#fff;text-align:left;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;}
+.membership-table tbody tr{border-top:1px solid var(--line);}
+.membership-table tbody tr:nth-child(even){background:var(--paper-deep);}
+.membership-table tbody tr:hover{background:var(--indigo-soft);}
+.membership-table tbody th,.membership-table tbody td{padding:19px 18px;text-align:left;vertical-align:middle;font-size:14px;line-height:1.55;color:var(--ink-soft);}
+.membership-table tbody th{font-family:'Merriweather','Hiragino Mincho ProN','Yu Mincho',serif;font-size:16px;color:var(--red);}
+.membership-table .membership-price{white-space:nowrap;font-size:20px;font-weight:800;color:var(--ink);}
+.membership-table .membership-action{text-align:right;white-space:nowrap;}
 .session-note{
   margin-top:0;border:1px solid var(--line);border-top:none;background:var(--paper-deep);
   padding:18px 22px;display:flex;gap:32px;flex-wrap:wrap;font-size:13.5px;color:var(--ink-soft);
@@ -607,6 +617,15 @@ footer.site-footer .foot-brand p{font-size:13.5px;opacity:.8;max-width:32ch;marg
   .topbar .topbar-links a:first-child{display:none;}
 }
 @media (max-width:560px){
+  .membership-table-wrap{overflow:visible;border:0;background:transparent;box-shadow:none;}
+  .membership-table,.membership-table tbody,.membership-table tr,.membership-table th,.membership-table td{display:block;width:100%;}
+  .membership-table thead{display:none;}
+  .membership-table tbody tr{margin-bottom:16px;padding:18px;border:1px solid var(--line);border-radius:var(--radius-md);background:var(--card)!important;box-shadow:var(--shadow-sm);}
+  .membership-table tbody th,.membership-table tbody td{padding:6px 0;}
+  .membership-table tbody th::before,.membership-table tbody td[data-label]::before{content:attr(data-label);display:block;margin-bottom:2px;font-family:'Nunito Sans',sans-serif;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint);}
+  .membership-table .membership-price{font-size:24px;color:var(--red);}
+  .membership-table .membership-action{padding-top:12px;text-align:left;}
+  .membership-table .membership-action .btn{width:100%;justify-content:center;}
   .partner-logo-grid{grid-template-columns:1fr;}
   .grid-3,.grid-4{grid-template-columns:1fr;}
   .steps{grid-template-columns:1fr;}
