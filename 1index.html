@@ -7,7 +7,7 @@
 <meta name="description" content="Alliance Française de Genève : cours de français pour tous les niveaux, événements culturels, préparation aux examens et immersion dans la francophonie au cœur de Genève.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="https://afge.ch/">
-<link rel="icon" href="assets/img/logo.png" type="image/png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23C8102E'/><text x='32' y='42' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='28' fill='%23F4CDA9' text-anchor='middle'>af</text></svg>">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://afge.ch/">
@@ -104,84 +104,6 @@
   ]
 }
 </script>
-
-<style>
-/* --- Instagram Cards Styling --- */
-.ig-card {
-  display: block;
-  text-decoration: none;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-  border: 1px solid var(--line, #eaeaea);
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
-}
-.ig-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-}
-.ig-img-wrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  overflow: hidden;
-  background: #f0f0f0;
-}
-.ig-img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-.ig-card:hover .ig-img-wrap img {
-  transform: scale(1.04);
-}
-.ig-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgba(255,255,255,0.92);
-  color: var(--ink, #1f2937);
-  font-size: 11.5px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  backdrop-filter: blur(4px);
-  z-index: 2;
-}
-.ig-badge.pinned {
-  background: var(--red, #C8102E);
-  color: #fff;
-}
-.ig-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 60%);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 20px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 3;
-}
-.ig-card:hover .ig-overlay {
-  opacity: 1;
-}
-.ig-cta-btn {
-  background: #fff;
-  color: var(--ink, #111);
-  font-size: 13px;
-  font-weight: 700;
-  padding: 8px 16px;
-  border-radius: 24px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-</style>
-
 </head>
 <body>
 <div class="topbar">
@@ -300,7 +222,7 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow"><span data-i18n="courses-eyebrow" style="display:contents">Nos cours</span></span>
-      <h2><span data-i18n="courses-h2" style="display:contents">Un format pour chaque objective.</span></h2>
+      <h2><span data-i18n="courses-h2" style="display:contents">Un format pour chaque objectif.</span></h2>
       <p><span data-i18n="courses-body" style="display:contents">Particuliers, en groupe, intensifs ou en entreprise — comparez tous nos formats et tarifs.</span></p>
     </div>
     <div class="grid grid-4">
@@ -335,70 +257,6 @@
     </div>
   </div>
 </section>
-
-<!-- ========== Instagramセクション ========== -->
-<section class="section" id="instagram" style="padding:64px 0; background-color: var(--bg-alt, #faf9f7); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
-  <div class="wrap">
-    <div class="section-head" style="text-align:center; max-width:680px; margin:0 auto 40px;">
-      <span class="eyebrow"><span data-i18n="ig-eyebrow" style="display:contents">Suivez-nous</span></span>
-      <h2 style="font-size:clamp(26px,3vw,34px); margin-top:8px;"><span data-i18n="ig-h2" style="display:contents">L'Alliance sur Instagram</span></h2>
-      <p style="color:var(--ink-soft); font-size:15.5px; margin-top:10px;"><span data-i18n="ig-p" style="display:contents">Découvrez les coulisses, nos actualités, les cours et les événements culturels en direct de Genève.</span></p>
-    </div>
-    
-    <div class="grid grid-4" style="gap:20px;">
-      
-      <!-- 投稿 1 (固定: Cours de français) -->
-      <a href="https://www.instagram.com/alliance_francaise.geneve/" target="_blank" rel="noopener noreferrer" class="ig-card">
-        <div class="ig-img-wrap">
-          <img src="assets/img/instagram/ig-pinned.jpg" alt="Alliance Française Genève - Cours de français" loading="lazy">
-          <span class="ig-badge pinned" data-i18n="ig-pinned">📌 Épinglé</span>
-          <div class="ig-overlay">
-            <span class="ig-cta-btn">Voir sur Instagram ↗</span>
-          </div>
-        </div>
-      </a>
-      
-      <!-- 投稿 2 (最新1: Genève monument) -->
-      <a href="https://www.instagram.com/alliance_francaise.geneve/" target="_blank" rel="noopener noreferrer" class="ig-card">
-        <div class="ig-img-wrap">
-          <img src="assets/img/instagram/ig-1.jpg" alt="Alliance Française Genève - Instagram Reel" loading="lazy">
-          <div class="ig-overlay">
-            <span class="ig-cta-btn">Voir sur Instagram ↗</span>
-          </div>
-        </div>
-      </a>
-      
-      <!-- 投稿 3 (最新2: Ateliers d'écriture) -->
-      <a href="https://www.instagram.com/alliance_francaise.geneve/" target="_blank" rel="noopener noreferrer" class="ig-card">
-        <div class="ig-img-wrap">
-          <img src="assets/img/instagram/ig-2.jpg" alt="Alliance Française Genève - Ateliers d'écriture" loading="lazy">
-          <div class="ig-overlay">
-            <span class="ig-cta-btn">Voir sur Instagram ↗</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- 投稿 4 (最新3: La vigne blanche) -->
-      <a href="https://www.instagram.com/alliance_francaise.geneve/" target="_blank" rel="noopener noreferrer" class="ig-card">
-        <div class="ig-img-wrap">
-          <img src="assets/img/instagram/ig-3.jpg" alt="Alliance Française Genève - Événement" loading="lazy">
-          <div class="ig-overlay">
-            <span class="ig-cta-btn">Voir sur Instagram ↗</span>
-          </div>
-        </div>
-      </a>
-      
-    </div>
-
-    <div style="text-align:center; margin-top:36px;">
-      <a href="https://www.instagram.com/alliance_francaise.geneve/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="display:inline-flex; align-items:center; gap:8px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        <span data-i18n="ig-btn" style="display:contents">@alliance_francaise.geneve sur Instagram →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
 <section class="section" style="padding:56px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
   <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
     <div>
@@ -491,29 +349,10 @@
 </section>
 <section class="partners" id="partenaires">
   <div class="wrap"><p class="label"><span data-i18n="partners-label" style="display:contents">Nos partenaires</span></p></div>
-  <div class="marquee">
-    <div class="marquee-track">
-      <img src="https://afge.ch/wp-content/uploads/2026/02/ambassade-de-france-en-suisse.png" alt="Gouvernement Français" style="height: 40px; width: auto; vertical-align: middle; margin: 0 15px;">
-      <img src="https://afge.ch/wp-content/uploads/2026/02/representation-permanente-de-la-france-aupres-de-loffice-des-nations-unies-a-geneve-et-des-organisations-internationales-en-suisse.png" alt="ONU Genève" style="height: 40px; width: auto; vertical-align: middle; margin: 0 15px;">
-      <img src="https://afge.ch/wp-content/uploads/2026/02/Fondation_des_Alliances_francaises_logo.svg.png" alt="Fondation des Alliances Françaises" style="height: 40px; width: auto; vertical-align: middle; margin: 0 15px;">
-      <img src="https://afge.ch/wp-content/uploads/2026/02/fifdh.png" alt="FIFDH" style="height: 40px; width: auto; vertical-align: middle; margin: 0 15px;">
-      <img src="https://afge.ch/wp-content/uploads/2026/02/institut-florimont.jpeg" alt="Institut Florimont" style="height: 40px; width: auto; vertical-align: middle; margin: 0 15px;">
-      <span>CCI Paris Île-de-France</span>
-      <img src="https://afge.ch/wp-content/uploads/2026/02/cinema-bio.png" alt="Cinéma Bio" style="height: 40px; width: auto; vertical-align: middle; margin: 0 15px;">
-      <img src="https://afge.ch/wp-content/uploads/2026/02/college-du-leman.jpg" alt="Collège du Léman" style="height: 40px; width: auto; vertical-align: middle; margin: 0 15px;">
-      <span>ESN Genève</span>
-
-      <img src="https://afge.ch/wp-content/uploads/2026/02/ambassade-de-france-en-suisse.png" alt="Gouvernement Français" style="height: 40px; width: auto; vertical-align: middle; margin: 0 15px;">
-      <img src="https://afge.ch/wp-content/uploads/2026/02/representation-permanente-de-la-france-aupres-de-loffice-des-nations-unies-a-geneve-et-des-organisations-internationales-en-suisse.png" alt="ONU Genève" style="height: 40px; width: auto; vertical-align: middle; margin: 0 15px;">
-      <img src="https://afge.ch/wp-content/uploads/2026/02/Fondation_des_Alliances_francaises_logo.svg.png" alt="Fondation des Alliances Françaises" style="height: 40px; width: auto; vertical-align: middle; margin: 0 15px;">
-      <img src="https://afge.ch/wp-content/uploads/2026/02/fifdh.png" alt="FIFDH" style="height: 40px; width: auto; vertical-align: middle; margin: 0 15px;">
-      <img src="https://afge.ch/wp-content/uploads/2026/02/institut-florimont.jpeg" alt="Institut Florimont" style="height: 40px; width: auto; vertical-align: middle; margin: 0 15px;">
-      <span>CCI Paris Île-de-France</span>
-      <img src="https://afge.ch/wp-content/uploads/2026/02/cinema-bio.png" alt="Cinéma Bio" style="height: 40px; width: auto; vertical-align: middle; margin: 0 15px;">
-      <img src="https://afge.ch/wp-content/uploads/2026/02/college-du-leman.jpg" alt="Collège du Léman" style="height: 40px; width: auto; vertical-align: middle; margin: 0 15px;">
-      <span>ESN Genève</span>
-    </div>
-  </div>
+  <div class="marquee"><div class="marquee-track">
+    <span>Gouvernement Français</span><span>ONU Genève</span><span>Fondation des Alliances Françaises</span><span>FIFDH</span><span>Institut Florimont</span><span>CCI Paris Île-de-France</span><span>Cinéma Bio</span><span>Collège du Léman</span><span>ESN Genève</span>
+    <span>Gouvernement Français</span><span>ONU Genève</span><span>Fondation des Alliances Françaises</span><span>FIFDH</span><span>Institut Florimont</span><span>CCI Paris Île-de-France</span><span>Cinéma Bio</span><span>Collège du Léman</span><span>ESN Genève</span>
+  </div></div>
 </section>
 <section class="section tinted" id="contact">
   <div class="wrap">
@@ -595,7 +434,7 @@
     </div>
   </div>
 </footer>
-<script>window.AFGE_I18N = {"ig-eyebrow":{"ja":"公式Instagram"},"ig-h2":{"ja":"アリアンスのInstagram"},"ig-p":{"ja":"ジュネーブでの日々の様子や最新の講座・文化イベント情報をお届けしています。"},"ig-pinned":{"ja":"📌 固定"},"ig-btn":{"ja":"Instagramで見る →"},"topbar-contact":{"ja":"お問い合わせ"},"nav-cours":{"ja":"フランス語コース"},"nav-niveau":{"ja":"レベル判定テスト"},"nav-niveau-sub":{"ja":"無料・オンライン — A1〜C2のレベルが分かります"},"dd-heading-cours":{"ja":"コース"},"dd-adultes":{"ja":"個人レッスン（大人）"},"dd-adultes-sub":{"ja":"個人、A1〜C1"},"dd-enfants":{"ja":"個人レッスン（子供）"},"dd-enfants-sub":{"ja":"個人、A1〜C1"},"dd-essentials":{"ja":"夜間コース：French Essentials"},"dd-essentials-sub":{"ja":"グループ、A1・A2"},"dd-action":{"ja":"夜間コース：French in Action"},"dd-action-sub":{"ja":"グループ、B1・B2"},"dd-intensifs":{"ja":"集中コース"},"dd-intensifs-sub":{"ja":"グループ、午前"},"dd-ateliers":{"ja":"テーマ別ワークショップ"},"dd-ateliers-sub":{"ja":"グループ、全レベル"},"dd-entreprise":{"ja":"企業向けコース"},"dd-entreprise-sub":{"ja":"法人、A1〜C1"},"nav-cours-overview":{"ja":"すべてのコースを見る"},"nav-cours-overview-sub":{"ja":"形式・レベル・料金を比較 →"},"nav-sejours":{"ja":"語学留学"},"nav-evenements":{"ja":"イベント"},"nav-alliance":{"ja":"アリアンスについて"},"nav-qui":{"ja":"私たちについて"},"nav-partenaires":{"ja":"パートナー"},"nav-faq":{"ja":"よくある質問"},"nav-contact":{"ja":"お問い合わせ"},"nav-don":{"ja":"寄付する"},"nav-adherer":{"ja":"入会する →"},"footer-tagline":{"ja":"非営利文化団体 — ジュネーブの中心でフランス語コースとフランス語圏文化を提供。"},"footer-h4-1":{"ja":"学ぶ"},"footer-l1":{"ja":"フランス語コース"},"footer-l2":{"ja":"レベル判定テスト"},"footer-l3":{"ja":"試験対策"},"footer-l4":{"ja":"語学留学"},"footer-h4-2":{"ja":"参加する"},"footer-l5":{"ja":"イベント"},"footer-l7":{"ja":"入会する"},"footer-l8":{"ja":"寄付する"},"footer-l10":{"ja":"パートナー"},"footer-h4-3":{"ja":"協会について"},"footer-l9":{"ja":"私たちについて"},"footer-l11":{"ja":"お問い合わせ"},"footer-l12":{"ja":"よくある質問"},"footer-copy":{"ja":"© 2026 ジュネーブ・アリアンス・フランセーズ"},"hero-eyebrow":{"ja":"870団体・135カ国"},"hero-h1":{"ja":"フランス語を学び、<em>つながりを築く。</em>"},"hero-lede":{"ja":"ジュネーブ・アリアンス・フランセーズにとって、フランス語の習得は単なる語学力ではありません。就労、権利、医療、教育、市民参加への扉を開く鍵です。"},"hero-btn1":{"ja":"コースを見る →"},"hero-btn2":{"ja":"レベルテストを受ける"},"hero-stat1":{"ja":"世界の拠点数"},"hero-stat2":{"ja":"全CEFRレベル対応"},"hero-badge3":{"ja":"ジュネーブ、スイス"},"intro-p1":{"ja":"誰もが参加できるコミュニティに加わり、情熱あふれる専門講師陣とともに日常の中でフランス語を体験しましょう。"},"intro-p2":{"ja":"ジュネーブ・アリアンス・フランセーズは、この街にやってきた方々がフランス語を学ぶだけでなく、文化的・市民的な生活の中に自分の居場所を見つけられることを願っています。そのために、CEFRの全レベルに対応したコースと、レベルに応じた教育的イベントを通じて、言語・社会・文化の統合プログラムを作りました。"},"courses-eyebrow":{"ja":"コース"},"courses-h2":{"ja":"目標に応じた、多彩なコース。"},"courses-body":{"ja":"個人・グループ・集中・法人向けまで。すべての形式と料金を比較できます。"},"fc0-tag":{"ja":"個人"},"fc0-title":{"ja":"個人レッスン（大人）"},"fc0-desc":{"ja":"自宅またはオンラインでの完全個人レッスン。仕事やプライベートの目標に合わせて。"},"fc-cta":{"ja":"詳しく見る →"},"fc1-tag":{"ja":"グループ"},"fc1-title":{"ja":"夜間コース：French Essentials"},"fc1-desc":{"ja":"週2回のオンラインレッスンで、フランス語の確かな基礎を。"},"fc2-tag":{"ja":"グループ"},"fc2-title":{"ja":"集中コース"},"fc2-desc":{"ja":"月〜金の午前中、集中的なイマージョンで一気に上達。"},"fc3-tag":{"ja":"法人"},"fc3-title":{"ja":"企業向けコース"},"fc3-desc":{"ja":"貴社チーム向けのオーダーメイドプログラム。対面またはオンライン。"},"courses-viewall":{"ja":"すべてのコースを見る →"},"events-h2":{"ja":"イベント"},"events-p":{"ja":"年間を通じたワークショップ、交流会、文化的な催し。"},"events-btn":{"ja":"詳しく見る →"},"mission-eyebrow":{"ja":"ジュネーブ・アリアンス・フランセーズについて"},"mission-h2":{"ja":"ジュネーブに根ざした、<em>世界的な</em>ネットワークの一員。"},"mission-p":{"ja":"ジュネーブのアリアンス・フランセーズは、135カ国以上、870以上の拠点をつなぐ国際的なネットワークの一員です。何千人もの教師とスタッフが共有する使命は、フランス語を伝え、フランス語圏の文化を分かち合い、豊かで多様な国際コミュニティを育てることです。"},"mission-stat1":{"ja":"世界の拠点数"},"mission-stat2":{"ja":"対象国数"},"mission-btn":{"ja":"私たちについてもっと知る →"},"leveltest-eyebrow":{"ja":"レベル判定テスト"},"leveltest-h2":{"ja":"無料のレベル判定テストで、あなたのフランス語力を確認しましょう。"},"leveltest-p":{"ja":"コースへの参加をお考えだけれど、どのレベルが合っているか迷っていませんか？目標に最も適したコースをご案内するため、無料のオンラインレベル判定テストをぜひご利用ください。"},"leveltest-btn":{"ja":"テストを申し込む →"},"event-tag":{"ja":"開催予定のイベント"},"event-eyebrow":{"ja":"執筆ワークショップ"},"event-h2":{"ja":"累計発行部数数百万部の作家、アニェス・アベカシスによる全6回のワークショップ！"},"event-p":{"ja":"ジュネーブ・アリアンス・フランセーズは、数百万人の読者を持つベストセラー作家アニェス・アベカシスによる、全6回の執筆ワークショップを開催します。遊び心と創造性にあふれた環境でフランス語学習を続けられるよう設計されており、自由に創造力を発揮していただけます。"},"event-meta1b":{"ja":"9月7日〜10月12日"},"event-meta1s":{"ja":"第1期・月曜日"},"event-meta2b":{"ja":"9月9日〜10月14日"},"event-meta2s":{"ja":"第2期・水曜日"},"event-meta3b":{"ja":"オンライン"},"event-meta3s":{"ja":"定員あり"},"event-btn":{"ja":"参加を予約する →"},"faq-eyebrow":{"ja":"よくある質問"},"faq-h2":{"ja":"FAQ"},"faq0q":{"ja":"自分のレベルに合ったコースはどうやって分かりますか？"},"faq0a":{"ja":"無料のレベル判定テストで、読解力・文法・語彙力を評価し、A1〜C2の中から最適なレベルへご案内します。"},"faq1q":{"ja":"フランス語コースはオンラインで受講できますか？"},"faq1a":{"ja":"はい、コースは主にオンラインで、インタラクティブなデジタルツールを使って提供されています。条件によっては対面での受講も可能です。"},"faq2q":{"ja":"どのようなコース形式があり、誰向けですか？"},"faq2a":{"ja":"ジュネーブ・アリアンス・フランセーズは、子ども・大人（15歳以上）を対象に、グループ・個人レッスンから法人向け研修、テーマ別ワークショップまで幅広く対応しています。"},"faq3q":{"ja":"DELFやDALFなどの公式試験は実施していますか？"},"faq3a":{"ja":"現時点では公式試験センターではありませんが、これらの資格に特化した対策コース・講座をご提供しています。"},"faq4q":{"ja":"会員になるとどんな特典がありますか？"},"faq4a":{"ja":"イベントや提携先での優待価格、文化活動への優先アクセス、そしてアリアンス・フランセーズのデジタル図書館「Culturethèque」をご利用いただけます。"},"faq5q":{"ja":"ジュネーブ・アリアンス・フランセーズへの入会方法は？"},"faq5a":{"ja":"年会費のお申し込みはすべてオンラインで、数分で完了します。個人アカウントを作成し、年会費をオンライン決済でお支払いいただくだけです。"},"contact-eyebrow":{"ja":"お問い合わせ"},"contact-h2":{"ja":"あなたのプロジェクトについて、お話ししましょう。"},"contact-body":{"ja":"フランス語を学びたい方も、文化イベントに参加したい方も、ちょっとした質問がある方も。ジュネーブ・アリアンス・フランセーズのチームがサポートいたします。"},"form-title":{"ja":"お問い合わせフォーム"},"form-nom":{"ja":"お名前"},"form-email":{"ja":"メールアドレス"},"form-sujet":{"ja":"件名"},"form-sujet-o0":{"ja":"フランス語コースについて"},"form-sujet-o1":{"ja":"語学留学について"},"form-sujet-o2":{"ja":"入会・寄付について"},"form-sujet-o3":{"ja":"その他"},"form-message":{"ja":"メッセージ"},"form-submit":{"ja":"送信する →"},"form-message-ph":{"ja":"どのようなご用件でしょうか？"},"form-nom-ph":{"ja":"お名前"},"form-email-ph":{"ja":"you@example.com"},"partners-label":{"ja":"パートナー"},"footercta-h2":{"ja":"ジュネーブ・アリアンス・フランセーズの会員になる"},"footercta-p":{"ja":"会員になることで、教育・文化プロジェクトを直接サポートしながら、会員限定の特典をお楽しみいただけます。"},"footercta-btn":{"ja":"参加する →"}};</script>
+<script>window.AFGE_I18N = {"topbar-contact":{"ja":"お問い合わせ"},"nav-cours":{"ja":"フランス語コース"},"nav-niveau":{"ja":"レベル判定テスト"},"nav-niveau-sub":{"ja":"無料・オンライン — A1〜C2のレベルが分かります"},"dd-heading-cours":{"ja":"コース"},"dd-adultes":{"ja":"個人レッスン（大人）"},"dd-adultes-sub":{"ja":"個人、A1〜C1"},"dd-enfants":{"ja":"個人レッスン（子供）"},"dd-enfants-sub":{"ja":"個人、A1〜C1"},"dd-essentials":{"ja":"夜間コース：French Essentials"},"dd-essentials-sub":{"ja":"グループ、A1・A2"},"dd-action":{"ja":"夜間コース：French in Action"},"dd-action-sub":{"ja":"グループ、B1・B2"},"dd-intensifs":{"ja":"集中コース"},"dd-intensifs-sub":{"ja":"グループ、午前"},"dd-ateliers":{"ja":"テーマ別ワークショップ"},"dd-ateliers-sub":{"ja":"グループ、全レベル"},"dd-entreprise":{"ja":"企業向けコース"},"dd-entreprise-sub":{"ja":"法人、A1〜C1"},"nav-cours-overview":{"ja":"すべてのコースを見る"},"nav-cours-overview-sub":{"ja":"形式・レベル・料金を比較 →"},"nav-sejours":{"ja":"語学留学"},"nav-evenements":{"ja":"イベント"},"nav-alliance":{"ja":"アリアンスについて"},"nav-qui":{"ja":"私たちについて"},"nav-partenaires":{"ja":"パートナー"},"nav-faq":{"ja":"よくある質問"},"nav-contact":{"ja":"お問い合わせ"},"nav-don":{"ja":"寄付する"},"nav-adherer":{"ja":"入会する →"},"footer-tagline":{"ja":"非営利文化団体 — ジュネーブの中心でフランス語コースとフランス語圏文化を提供。"},"footer-h4-1":{"ja":"学ぶ"},"footer-l1":{"ja":"フランス語コース"},"footer-l2":{"ja":"レベル判定テスト"},"footer-l3":{"ja":"試験対策"},"footer-l4":{"ja":"語学留学"},"footer-h4-2":{"ja":"参加する"},"footer-l5":{"ja":"イベント"},"footer-l7":{"ja":"入会する"},"footer-l8":{"ja":"寄付する"},"footer-l10":{"ja":"パートナー"},"footer-h4-3":{"ja":"協会について"},"footer-l9":{"ja":"私たちについて"},"footer-l11":{"ja":"お問い合わせ"},"footer-l12":{"ja":"よくある質問"},"footer-copy":{"ja":"© 2026 ジュネーブ・アリアンス・フランセーズ"},"hero-eyebrow":{"ja":"870団体・135カ国"},"hero-h1":{"ja":"フランス語を学び、<em>つながりを築く。</em>"},"hero-lede":{"ja":"ジュネーブ・アリアンス・フランセーズにとって、フランス語の習得は単なる語学力ではありません。就労、権利、医療、教育、市民参加への扉を開く鍵です。"},"hero-btn1":{"ja":"コースを見る →"},"hero-btn2":{"ja":"レベルテストを受ける"},"hero-stat1":{"ja":"世界の拠点数"},"hero-stat2":{"ja":"全CEFRレベル対応"},"hero-badge3":{"ja":"ジュネーブ、スイス"},"intro-p1":{"ja":"誰もが参加できるコミュニティに加わり、情熱あふれる専門講師陣とともに日常の中でフランス語を体験しましょう。"},"intro-p2":{"ja":"ジュネーブ・アリアンス・フランセーズは、この街にやってきた方々がフランス語を学ぶだけでなく、文化的・市民的な生活の中に自分の居場所を見つけられることを願っています。そのために、CEFRの全レベルに対応したコースと、レベルに応じた教育的イベントを通じて、言語・社会・文化の統合プログラムを作りました。"},"courses-eyebrow":{"ja":"コース"},"courses-h2":{"ja":"目標に応じた、多彩なコース。"},"courses-body":{"ja":"個人・グループ・集中・法人向けまで。すべての形式と料金を比較できます。"},"fc0-tag":{"ja":"個人"},"fc0-title":{"ja":"個人レッスン（大人）"},"fc0-desc":{"ja":"自宅またはオンラインでの完全個人レッスン。仕事やプライベートの目標に合わせて。"},"fc-cta":{"ja":"詳しく見る →"},"fc1-tag":{"ja":"グループ"},"fc1-title":{"ja":"夜間コース：French Essentials"},"fc1-desc":{"ja":"週2回のオンラインレッスンで、フランス語の確かな基礎を。"},"fc2-tag":{"ja":"グループ"},"fc2-title":{"ja":"集中コース"},"fc2-desc":{"ja":"月〜金の午前中、集中的なイマージョンで一気に上達。"},"fc3-tag":{"ja":"法人"},"fc3-title":{"ja":"企業向けコース"},"fc3-desc":{"ja":"貴社チーム向けのオーダーメイドプログラム。対面またはオンライン。"},"courses-viewall":{"ja":"すべてのコースを見る →"},"events-h2":{"ja":"イベント"},"events-p":{"ja":"年間を通じたワークショップ、交流会、文化的な催し。"},"events-btn":{"ja":"詳しく見る →"},"mission-eyebrow":{"ja":"ジュネーブ・アリアンス・フランセーズについて"},"mission-h2":{"ja":"ジュネーブに根ざした、<em>世界的な</em>ネットワークの一員。"},"mission-p":{"ja":"ジュネーブのアリアンス・フランセーズは、135カ国以上、870以上の拠点をつなぐ国際的なネットワークの一員です。何千人もの教師とスタッフが共有する使命は、フランス語を伝え、フランス語圏の文化を分かち合い、豊かで多様な国際コミュニティを育てることです。"},"mission-stat1":{"ja":"世界の拠点数"},"mission-stat2":{"ja":"対象国数"},"mission-btn":{"ja":"私たちについてもっと知る →"},"leveltest-eyebrow":{"ja":"レベル判定テスト"},"leveltest-h2":{"ja":"無料のレベル判定テストで、あなたのフランス語力を確認しましょう。"},"leveltest-p":{"ja":"コースへの参加をお考えだけれど、どのレベルが合っているか迷っていませんか？目標に最も適したコースをご案内するため、無料のオンラインレベル判定テストをぜひご利用ください。"},"leveltest-btn":{"ja":"テストを申し込む →"},"event-tag":{"ja":"開催予定のイベント"},"event-eyebrow":{"ja":"執筆ワークショップ"},"event-h2":{"ja":"累計発行部数数百万部の作家、アニェス・アベカシスによる全6回のワークショップ！"},"event-p":{"ja":"ジュネーブ・アリアンス・フランセーズは、数百万人の読者を持つベストセラー作家アニェス・アベカシスによる、全6回の執筆ワークショップを開催します。遊び心と創造性にあふれた環境でフランス語学習を続けられるよう設計されており、自由に創造力を発揮していただけます。"},"event-meta1b":{"ja":"9月7日〜10月12日"},"event-meta1s":{"ja":"第1期・月曜日"},"event-meta2b":{"ja":"9月9日〜10月14日"},"event-meta2s":{"ja":"第2期・水曜日"},"event-meta3b":{"ja":"オンライン"},"event-meta3s":{"ja":"定員あり"},"event-btn":{"ja":"参加を予約する →"},"faq-eyebrow":{"ja":"よくある質問"},"faq-h2":{"ja":"FAQ"},"faq0q":{"ja":"自分のレベルに合ったコースはどうやって分かりますか？"},"faq0a":{"ja":"無料のレベル判定テストで、読解力・文法・語彙力を評価し、A1〜C2の中から最適なレベルへご案内します。"},"faq1q":{"ja":"フランス語コースはオンラインで受講できますか？"},"faq1a":{"ja":"はい、コースは主にオンラインで、インタラクティブなデジタルツールを使って提供されています。条件によっては対面での受講も可能です。"},"faq2q":{"ja":"どのようなコース形式があり、誰向けですか？"},"faq2a":{"ja":"ジュネーブ・アリアンス・フランセーズは、子ども・大人（15歳以上）を対象に、グループ・個人レッスンから法人向け研修、テーマ別ワークショップまで幅広く対応しています。"},"faq3q":{"ja":"DELFやDALFなどの公式試験は実施していますか？"},"faq3a":{"ja":"現時点では公式試験センターではありませんが、これらの資格に特化した対策コース・講座をご提供しています。"},"faq4q":{"ja":"会員になるとどんな特典がありますか？"},"faq4a":{"ja":"イベントや提携先での優待価格、文化活動への優先アクセス、そしてアリアンス・フランセーズのデジタル図書館「Culturethèque」をご利用いただけます。"},"faq5q":{"ja":"ジュネーブ・アリアンス・フランセーズへの入会方法は？"},"faq5a":{"ja":"年会費のお申し込みはすべてオンラインで、数分で完了します。個人アカウントを作成し、年会費をオンライン決済でお支払いいただくだけです。"},"contact-eyebrow":{"ja":"お問い合わせ"},"contact-h2":{"ja":"あなたのプロジェクトについて、お話ししましょう。"},"contact-body":{"ja":"フランス語を学びたい方も、文化イベントに参加したい方も、ちょっとした質問がある方も。ジュネーブ・アリアンス・フランセーズのチームがサポートいたします。"},"form-title":{"ja":"お問い合わせフォーム"},"form-nom":{"ja":"お名前"},"form-email":{"ja":"メールアドレス"},"form-sujet":{"ja":"件名"},"form-sujet-o0":{"ja":"フランス語コースについて"},"form-sujet-o1":{"ja":"語学留学について"},"form-sujet-o2":{"ja":"入会・寄付について"},"form-sujet-o3":{"ja":"その他"},"form-message":{"ja":"メッセージ"},"form-submit":{"ja":"送信する →"},"form-message-ph":{"ja":"どのようなご用件でしょうか？"},"form-nom-ph":{"ja":"お名前"},"form-email-ph":{"ja":"you@example.com"},"partners-label":{"ja":"パートナー"},"footercta-h2":{"ja":"ジュネーブ・アリアンス・フランセーズの会員になる"},"footercta-p":{"ja":"会員になることで、教育・文化プロジェクトを直接サポートしながら、会員限定の特典をお楽しみいただけます。"},"footercta-btn":{"ja":"参加する →"}};</script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
