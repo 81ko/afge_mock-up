@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue à Genève ! | Guide Complet & Soutien AFGE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        :root {
+            --bg-color: #faf9f6;
+            --card-bg: #ffffff;
+            --text-main: #2c2c2c;
+            --text-muted: #666666;
+            --accent-blue: #0066cc;
+            --accent-green: #2e7d32;
+            --accent-orange: #d97706;
+            --accent-red: #d32f2f;
+            --border-color: #e5e2db;
+            --radius: 14px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            padding: 40px 30px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        header p.subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .intro-box {
+            background: #f4f2ec;
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin: 40px 0 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        /* 🚨 Urgences Box */
+        .emergency-box {
+            background: #fff5f5;
+            border: 2px solid var(--accent-red);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .emergency-box h3 {
+            color: var(--accent-red);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .emergency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .emergency-item {
+            background: #ffffff;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ffcccc;
+        }
+
+        .emergency-item strong {
+            font-size: 1.1rem;
+            color: var(--accent-red);
+        }
+
+        /* 💙 AFGE Support Box */
+        .afge-support-box {
+            background: #eef2f7;
+            border: 2px solid var(--accent-blue);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 30px;
+        }
+
+        .afge-support-box h3 {
+            color: var(--accent-blue);
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .afge-support-box p {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        /* 📅 Calendrier Moderne */
+        .calendar-card-modern {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            margin-bottom: 30px;
+        }
+
+        .cal-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .cal-nav h3 { font-size: 1.2rem; font-family: 'Playfair Display', serif; }
+        .cal-btn-group { display: flex; gap: 8px; }
+        .cal-switch-btn {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        .cal-switch-btn.active { background: var(--text-main); color: #fff; border-color: var(--text-main); }
+
+        .cal-grid-view {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 6px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .cal-dow {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            padding-bottom: 4px;
+        }
+
+        .cal-day {
+            padding: 10px 0;
+            font-size: 0.9rem;
+            background: var(--bg-color);
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .cal-day:hover { border-color: var(--accent-blue); }
+        .cal-day.has-event {
+            background: #eef2f7;
+            color: var(--accent-blue);
+            font-weight: 700;
+            border-color: #bde0fe;
+        }
+
+        .cal-event-detail {
+            background: #fdfbf7;
+            border-left: 4px solid var(--accent-blue);
+            padding: 14px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            font-size: 0.9rem;
+        }
+
+        /* 🗺️ Map */
+        #map {
+            width: 100%;
+            height: 450px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+            z-index: 1;
+        }
+
+        .leaflet-popup-content-wrapper { border-radius: var(--radius); padding: 0; overflow: hidden; }
+        .leaflet-popup-content { margin: 0 !important; line-height: 1.5; }
+        .map-popup-card { width: 240px; }
+        .map-popup-card img { width: 100%; height: 120px; object-fit: cover; }
+        .map-popup-body { padding: 12px; }
+        .map-popup-body h4 { font-size: 1rem; margin-bottom: 4px; }
+        .map-popup-body p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; }
+        .kid-badge {
+            display: inline-block;
+            background: #eaf4eb;
+            color: var(--accent-green);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 12px;
+        }
+
+        /* 📱 Apps Grid */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 15px;
+        }
+
+        .app-card {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .app-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .app-card h4 { font-size: 1rem; display: flex; align-items: center; justify-content: space-between; }
+        .app-card p { font-size: 0.85rem; color: var(--text-muted); }
+        .app-link { font-size: 0.8rem; color: var(--accent-blue); text-decoration: none; font-weight: 600; align-self: flex-start; }
+        .app-link:hover { text-decoration: underline; }
+
+        /* Quartiers Grid */
+        .quartiers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .quartier-card {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 18px;
+        }
+
+        .quartier-card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+        .quartier-card p { font-size: 0.9rem; color: var(--text-muted); }
+
+        /* Accordion */
+        .things-list { display: flex; flex-direction: column; gap: 10px; }
+        details {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 14px 18px;
+            transition: background 0.2s;
+        }
+        details[open] { background: #ffffff; border-color: var(--text-main); box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+        summary {
+            font-weight: 650;
+            font-size: 1rem;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: "+"; font-size: 1.2rem; color: var(--text-muted); }
+        details[open] summary::after { content: "−"; }
+
+        .details-content {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .details-content p { margin-bottom: 6px; }
+
+        .badge {
+            display: inline-block;
+            background: #eef2f7;
+            color: var(--accent-blue);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 20px;
+            margin-top: 6px;
+            margin-right: 4px;
+        }
+        .badge-green { background: #eaf4eb; color: var(--accent-green); }
+        .badge-orange { background: #fdf6ec; color: var(--accent-orange); }
+        .badge-red { background: #fce8e6; color: var(--accent-red); }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 15px; }
+            #map { height: 350px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>BIENVENUE À GENÈVE !</h1>
+        <p class="subtitle">Le petit guide pour profiter de la ville comme un·e local·e</p>
+    </header>
+
+    <div class="intro-box">
+        <p>Quelques mois à Genève ? Tu vas découvrir une ville internationale, jeune et cosmopolite, installée entre le Léman, le Rhône, les montagnes et les vignobles[cite: 1, 2]. Ce guide rassemble les incontournables, les urgences, les aspects pratiques et les événements pour vivre Genève pleinement[cite: 1, 2].</p>
+    </div>
+
+    <!-- 🚨 Urgences -->
+    <div class="emergency-box">
+        <h3>🚨 Urgences : Contacts Essentiels</h3>
+        <p style="font-size: 0.85rem; margin-bottom: 12px; color: #555;">Enregistrez ces numéros dans votre téléphone dès votre arrivée[cite: 1, 2] :</p>
+        <div class="emergency-grid">
+            <div class="emergency-item"><p>Police[cite: 1, 2]</p><strong>📞 117[cite: 1, 2]</strong></div>
+            <div class="emergency-item"><p>Ambulance[cite: 1, 2]</p><strong>📞 144[cite: 1, 2]</strong></div>
+            <div class="emergency-item"><p>Pompiers[cite: 1, 2]</p><strong>📞 118[cite: 1, 2]</strong></div>
+            <div class="emergency-item"><p>Urgence Européenne[cite: 1, 2]</p><strong>📞 112[cite: 1, 2]</strong></div>
+        </div>
+    </div>
+
+    <!-- 💙 AFGE Support & Force -->
+    <div class="afge-support-box">
+        <h3>💙 Le Soutien de l'AFGE (Alliance Française de Genève)</h3>
+        <p><strong>Un accompagnement personnalisé :</strong> En cas de besoin, l'AFGE est aux côtés de ses élèves et membres pour les conseiller dans leur vie quotidienne à Genève. L'assistance est également disponible en anglais.</p>
+        <p><strong>Des cours et du lien social :</strong> Nous proposons de nombreux cours de français conçus pour acquérir de solides compétences linguistiques, ainsi que de multiples événements favorisant les connexions et les rencontres.</p>
+        <p><strong>Pour vos enfants et votre avenir :</strong> Si vous avez des enfants, nous les aidons non seulement à maîtriser le français pour intégrer l'école locale, mais nous mettons surtout en avant notre véritable force : l'expertise pédagogique, la qualité de nos enseignants et l'excellence de notre ingénierie de formation.</p>
+        <p><em>Notre promesse :</em> Ne pas vous enseigner un français de surface, mais vous offrir de véritables connaissances qui resteront un patrimoine précieux pour toute votre vie. Nous ne vous décevrons pas !</p>
+    </div>
+
+    <!-- 🗺️ 1. Genève en un coup d'œil -->
+    <section>
+        <h2>🗺️ 1. Genève en un coup d'œil</h2>
+        <div class="quartiers-grid">
+            <div class="quartier-card">
+                <h3>🏛️ Vieille-Ville</h3>
+                <p>Les ruelles historiques, la cathédrale Saint-Pierre, la promenade de la Treille, les petites places et les cafés[cite: 1, 2].</p>
+            </div>
+            <div class="quartier-card">
+                <h3>🌊 Pâquis</h3>
+                <p>Le quartier idéal pour l'été : lac, baignade, restaurants, bars et ambiance cosmopolite[cite: 1, 2].</p>
+            </div>
+            <div class="quartier-card">
+                <h3>🌿 Eaux-Vives</h3>
+                <p>Parcs, lac, plage, cafés et promenade au bord de l'eau[cite: 1, 2].</p>
+            </div>
+            <div class="quartier-card">
+                <h3>🎨 Plainpalais</h3>
+                <p>Quartier étudiant et vivant : restaurants, bars, marché, brocantes, skatepark et vie culturelle[cite: 1, 2].</p>
+            </div>
+            <div class="quartier-card">
+                <h3>🌈 Carouge</h3>
+                <p>À quelques minutes du centre, une ambiance complètement différente : petites rues, terrasses, boutiques indépendantes[cite: 1, 2].</p>
+            </div>
+            <div class="quartier-card">
+                <h3>🏢 Les Grottes</h3>
+                <p>Un quartier alternatif et coloré, connu pour ses immeubles originaux, ses petites places et son ambiance bohème[cite: 1, 2].</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📋 Check-list Installation & Vie Pratique -->
+    <section>
+        <h2>📋 Check-list Installation & Vie Pratique</h2>
+        <div class="things-list">
+            <details open>
+                <summary>⚡ Énergie & Eau (SIG)</summary>
+                <div class="details-content">
+                    <p>Contactez les <em>Services Industriels de Genève (SIG)</em> pour ouvrir votre compteur. L'eau du robinet est excellente : ayez toujours une gourde sur vous ![cite: 1, 2]</p>
+                    <a href="https://www.sig-ge.ch" target="_blank" class="app-link">🔗 Site officiel SIG</a>
+                </div>
+            </details>
+            <details>
+                <summary>🏥 Santé & Hôpitaux (LAMal & HUG)</summary>
+                <div class="details-content">
+                    <p>L'assurance-maladie (LAMal) est obligatoire pour tous les résidents[cite: 1, 2]. Pour les urgences 24h/24, rendez-vous aux <strong>Hôpitaux Universitaires de Genève (HUG)</strong>[cite: 1, 2].</p>
+                    <a href="https://www.bag.admin.ch" target="_blank" class="app-link">🔗 Office fédéral de la santé publique (OFSP)</a>
+                </div>
+            </details>
+            <details>
+                <summary>🚊 Transports (TPG & Abonnements)</summary>
+                <div class="details-content">
+                    <p>Utilisez l'application <strong>TPG+</strong>[cite: 1, 2]. Si vous êtes étudiant, demandez votre carte pour bénéficier du tarif réduit (学割) ![cite: 1, 2]</p>
+                    <a href="https://www.tpg.ch" target="_blank" class="app-link">🔗 TPG Site officiel</a>
+                </div>
+            </details>
+            <details>
+                <summary>📞 Communication & Internet</summary>
+                <div class="details-content">
+                    <p>Swisscom, Salt, et Sunrise sont les principaux opérateurs pour vos abonnements et la fibre à la maison[cite: 1, 2].</p>
+                    <a href="https://www.swisscom.ch" target="_blank" class="app-link">🔗 Swisscom</a> | <a href="https://www.salt.ch" target="_blank" class="app-link">Salt</a> | <a href="https://www.sunrise.ch" target="_blank" class="app-link">Sunrise</a>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- 📅 Calendrier Interactif -->
+    <section>
+        <h2>📅 Calendrier des Événements & AFGE</h2>
+        <div class="calendar-card-modern">
+            <div class="cal-nav">
+                <h3 id="cal-title">2026 - Septembre</h3>
+                <div class="cal-btn-group">
+                    <button class="cal-switch-btn active" onclick="changeMonth(9)">Septembre</button>
+                    <button class="cal-switch-btn" onclick="changeMonth(10)">Octobre</button>
+                </div>
+            </div>
+            
+            <div class="cal-grid-view">
+                <div class="cal-dow">Lun</div><div class="cal-dow">Mar</div><div class="cal-dow">Mer</div><div class="cal-dow">Jeu</div><div class="cal-dow">Ven</div><div class="cal-dow">Sam</div><div class="cal-dow">Dim</div>
+            </div>
+            <div class="cal-grid-view" id="cal-days-container"></div>
+
+            <div class="cal-event-detail" id="cal-detail-box">
+                <strong>💡 Mode d'emploi :</strong> Touchez une date en surbrillance pour afficher les détails des ateliers AFGE et des événements à Genève.
+            </div>
+        </div>
+    </section>
+
+    <!-- 🗺️ Carte Interactive -->
+    <section>
+        <h2>🗺️ Carte interactive : Spots, Loisirs, Nature & Culture</h2>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px;">Touchez les épingles pour découvrir les photos, descriptions et repérer les activités idéales pour les enfants (badge 🧸).</p>
+        <div id="map"></div>
+    </section>
+
+    <!-- 📱 Applications indispensables -->
+    <section>
+        <h2>📱 Les applications indispensables</h2>
+        <div class="app-grid">
+            <div class="app-card">
+                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=400&q=80" alt="TPG App UI">
+                <h4><span>TPG+</span> <span class="badge">Transport</span></h4>
+                <p><strong>Utilité :</strong> Horaires en temps réel, recherche d'itinéraires et achat de titres de transport pour les bus et trams genevois.</p>
+                <a href="https://www.tpg.ch" target="_blank" class="app-link">🔗 Site TPG</a>
+            </div>
+            <div class="app-card">
+                <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=400&q=80" alt="CFF App UI">
+                <h4><span>CFF (SBB)</span> <span class="badge badge-orange">Trains</span></h4>
+                <p><strong>Utilité :</strong> Indispensable pour vos voyages et excursions en train à travers toute la Suisse.</p>
+                <a href="https://www.sbb.ch" target="_blank" class="app-link">🔗 Site CFF</a>
+            </div>
+            <div class="app-card">
+                <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=400&q=80" alt="SuisseMobile UI">
+                <h4><span>SuisseMobile</span> <span class="badge badge-green">Rando</span></h4>
+                <p><strong>Utilité :</strong> L'application incontournable pour planifier vos randonnées et itinéraires pédestres ou cyclistes.</p>
+                <a href="https://www.suissemobile.ch" target="_blank" class="app-link">🔗 Site SuisseMobile</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 💡 Conseils de Local -->
+    <section>
+        <h2>💡 Conseils de Local & Vie Quotidienne</h2>
+        <div class="things-list">
+            <details>
+                <summary>🕰️ Horaires et Magasins</summary>
+                <div class="details-content">
+                    <p>Les commerces ferment généralement plus tôt qu'en France et sont souvent fermés le dimanche[cite: 1, 2].</p>
+                </div>
+            </details>
+            <details>
+                <summary>♻️ Tri des déchets</summary>
+                <div class="details-content">
+                    <p>La Suisse est très stricte sur le tri. Renseignez-vous auprès de votre gérance pour connaître les jours de ramassage[cite: 1, 2].</p>
+                </div>
+            </details>
+            <details>
+                <summary>🤝 Vie sociale & Intégration</summary>
+                <div class="details-content">
+                    <p>Inscrivez-vous à des événements étudiants, des soirées linguistiques ou des groupes internationaux pour intégrer la communauté[cite: 1, 2].</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Genève Family & Local Guide. Profitez bien de votre séjour !</p>
+    </footer>
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    /* カレンダーロジック */
+    const calendarEvents = {
+        "2026-9-7": { title: "Ateliers AFGE (Lundi) - Début", desc: "Ateliers en distanciel (7 sept - 12 oct). Soutien aux élèves et membres[cite: 1, 2]." },
+        "2026-9-9": { title: "Ateliers AFGE (Mercredi) - Début", desc: "Ateliers en distanciel (9 sept - 14 oct). Soutien aux élèves et membres[cite: 1, 2]." },
+        "2026-9-14": { title: "Ateliers AFGE (Lundi)", desc: "Session de cours en ligne[cite: 1, 2]." },
+        "2026-9-16": { title: "Ateliers AFGE (Mercredi)", desc: "Session de cours en ligne[cite: 1, 2]." },
+        "2026-9-21": { title: "Ateliers AFGE (Lundi)", desc: "Session de cours en ligne[cite: 1, 2]." },
+        "2026-9-23": { title: "Ateliers AFGE (Mercredi)", desc: "Session de cours en ligne[cite: 1, 2]." },
+        "2026-9-28": { title: "Ateliers AFGE (Lundi)", desc: "Session de cours en ligne[cite: 1, 2]." },
+        "2026-9-30": { title: "Ateliers AFGE (Mercredi)", desc: "Session de cours en ligne[cite: 1, 2]." },
+        "2026-10-5": { title: "Ateliers AFGE (Lundi)", desc: "Session de cours en ligne[cite: 1, 2]." },
+        "2026-10-7": { title: "Ateliers AFGE (Mercredi)", desc: "Session de cours en ligne[cite: 1, 2]." },
+        "2026-10-12": { title: "Ateliers AFGE (Lundi) - Fin", desc: "Dernière séance de la session[cite: 1, 2]." },
+        "2026-10-14": { title: "Ateliers AFGE (Mercredi) - Fin", desc: "Dernière séance de la session[cite: 1, 2]." }
+    };
+
+    function renderCalendar(year, month) {
+        const container = document.getElementById('cal-days-container');
+        container.innerHTML = "";
+        document.getElementById('cal-title').innerText = `${year} - ${month === 9 ? 'Septembre' : 'Octobre'}`;
+
+        const firstDay = new Date(year, month - 1, 1).getDay();
+        let startingPoint = (firstDay === 0) ? 6 : firstDay - 1;
+        const totalDays = new Date(year, month, 0).getDate();
+
+        let date = 1;
+        for (let i = 0; i < 42; i++) {
+            let cell = document.createElement('div');
+            cell.className = 'cal-day';
+            
+            if (i >= startingPoint && date <= totalDays) {
+                let dateStr = `${year}-${month}-${date}`;
+                cell.innerText = date;
+                if (calendarEvents[dateStr]) {
+                    cell.classList.add('has-event');
+                    cell.onclick = (function(dStr) {
+                        return function() { showCalEvent(dStr); };
+                    })(dateStr);
+                } else {
+                    cell.onclick = (function(dStr) {
+                        return function() { 
+                            document.getElementById('cal-detail-box').innerHTML = `<strong>📌 ${dStr}</strong><p>Aucun événement particulier ce jour-là. Profitez bien de votre journée !</p>`;
+                        };
+                    })(dateStr);
+                }
+                date++;
+            } else {
+                cell.style.visibility = 'hidden';
+            }
+            container.appendChild(cell);
+            if (date > totalDays && i >= startingPoint + totalDays - 1) break;
+        }
+    }
+
+    function changeMonth(m) {
+        document.querySelectorAll('.cal-switch-btn').forEach(b => b.classList.remove('active'));
+        if(m === 9) {
+            document.querySelectorAll('.cal-switch-btn')[0].classList.add('active');
+            renderCalendar(2026, 9);
+        } else {
+            document.querySelectorAll('.cal-switch-btn')[1].classList.add('active');
+            renderCalendar(2026, 10);
+        }
+        document.getElementById('cal-detail-box').innerHTML = `<strong>💡 Mode d'emploi :</strong> Touchez une date en surbrillance pour afficher les détails des ateliers AFGE et des événements à Genève.`;
+    }
+
+    function showCalEvent(dateStr) {
+        const ev = calendarEvents[dateStr];
+        document.getElementById('cal-detail-box').innerHTML = `<strong>📌 Événement du ${dateStr}</strong><p><strong>${ev.title}</strong><br>${ev.desc}</p>`;
+    }
+
+    renderCalendar(2026, 9);
+
+    /* 地図の初期化 */
+    var map = L.map('map').setView([46.2044, 6.1432], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    var spots = [
+        {
+            lat: 46.1955, lng: 6.1495,
+            title: "HUG (Hôpitaux Universitaires de Genève)",
+            desc: "Service d'urgence 24h/24[cite: 1, 2].",
+            img: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=400&q=80",
+            kid: false
+        },
+        {
+            lat: 46.2078, lng: 6.1560,
+            title: "Jet d'eau",
+            desc: "Le symbole de Genève[cite: 1, 2]. À voir depuis la rive ou les Bains des Pâquis.",
+            img: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=400&q=80",
+            kid: false
+        },
+        {
+            lat: 46.2115, lng: 6.1528,
+            title: "Bains des Pâquis",
+            desc: "Baignade, plongeoir, soleil et vue exceptionnelle. Entrée à 2 CHF[cite: 1, 2].",
+            img: "https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=400&q=80",
+            kid: true
+        },
+        {
+            lat: 46.2085, lng: 6.1600,
+            title: "Baby-Plage & Plage des Eaux-Vives",
+            desc: "Petite plage de sable et grande plage gratuite, parfaites pour les familles[cite: 1, 2].",
+            img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80",
+            kid: true
+        },
+        {
+            lat: 46.2005, lng: 6.1460,
+            title: "Parc des Bastions",
+            desc: "Idéal pour une pause entre deux cours, avec ses jeux et ses échecs géants[cite: 1, 2].",
+            img: "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?auto=format&fit=crop&w=400&q=80",
+            kid: true
+        },
+        {
+            lat: 46.2025, lng: 6.1260,
+            title: "Bois de la Bâtie",
+            desc: "Une vraie parenthèse nature accessible sans voiture, avec des animaux[cite: 1, 2].",
+            img: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=400&q=80",
+            kid: true
+        },
+        {
+            lat: 46.1980, lng: 6.1510,
+            title: "Musée d'art et d'histoire",
+            desc: "Le grand musée généraliste de Genève. Collections permanentes gratuites[cite: 1, 2] !",
+            img: "https://images.unsplash.com/photo-1565060169194-1425c276329e?auto=format&fit=crop&w=400&q=80",
+            kid: true
+        },
+        {
+            lat: 46.1835, lng: 6.1390,
+            title: "Carouge",
+            desc: "Ambiance d'inspiration italienne, terrasses et boutiques indépendantes[cite: 1, 2].",
+            img: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=400&q=80",
+            kid: false
+        }
+    ];
+
+    spots.forEach(function(spot) {
+        var kidHtml = spot.kid ? '<br><span class="kid-badge">🧸 Idéal en famille !</span>' : '';
+        var customPopup = `
+            <div class="map-popup-card">
+                <img src="${spot.img}" alt="${spot.title}">
+                <div class="map-popup-body">
+                    <h4>${spot.title}</h4>
+                    <p>${spot.desc}</p>
+                    ${kidHtml}
+                </div>
+            </div>
+        `;
+        L.marker([spot.lat, spot.lng]).addTo(map).bindPopup(customPopup);
+    });
+</script>
+
+</body>
+</html>
